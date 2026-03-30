@@ -3,63 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nordlys - Visitenkarte</title>
+    <title>Nordlys - Sauberkeit mit Herz</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Hier fügen wir die Struktur für den Hintergrund hinzu */
         .bg-structure {
             background-color: #f2f3ea;
-            background-image: radial-gradient(#d1d2c7 0.5px, transparent 0.5px);
-            background-size: 10px 10px;
+            /* Ein ganz feines Punktmuster für eine papierähnliche Haptik */
+            background-image: radial-gradient(#d1d2c7 0.8px, transparent 0.8px);
+            background-size: 12px 12px;
         }
     </style>
 </head>
-<body class="bg-structure flex items-center justify-center min-h-screen p-4">
+<body class="bg-structure flex items-center justify-center min-h-screen p-4 font-sans text-slate-800">
 
-    <div class="max-w-sm w-full bg-white rounded-2xl shadow-2xl overflow-hidden transform transition hover:scale-105 duration-300">
-        <div class="h-24 bg-[#767a3f] shadow-inner"></div>
+    <div class="max-w-sm w-full bg-white rounded-3xl shadow-2xl overflow-hidden transform transition hover:scale-[1.02] duration-300">
+        <div class="h-28 bg-[#767a3f] relative">
+            <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/canvas-orange.png')]"></div>
+        </div>
         
-        <div class="px-6 pb-8">
+        <div class="px-8 pb-10">
             <div class="relative -mt-16 flex justify-center">
-                <div class="bg-white p-1 rounded-full shadow-lg overflow-hidden w-32 h-32 border-4 border-white text-center flex items-center justify-center">
+                <div class="bg-white p-1 rounded-full shadow-xl overflow-hidden w-32 h-32 border-4 border-white">
                     <img src="images/Nordlys_Logo_Transparent.png" 
                          alt="Nordlys Logo" 
                          class="w-full h-full object-contain p-2">
                 </div>
             </div>
 
-            <div class="text-center mt-4 border-b border-slate-100 pb-4">
-                <h1 class="text-2xl font-bold text-slate-800 tracking-tight">Stefanie Timm & Jannik Hein</h1>
-                <p class="text-[#767a3f] font-semibold uppercase text-xs tracking-widest mt-1 italic">Nordlys – Sauberkeit mit Herz</p>
+            <div class="text-center mt-6">
+                <h1 class="text-2xl font-bold tracking-tight text-slate-900">Stefanie Timm & Jannik Hein</h1>
+                <p class="text-[#767a3f] font-bold uppercase text-[10px] tracking-[0.2em] mt-1">Nordlys – Sauberkeit mit Herz</p>
             </div>
 
-            <div class="mt-5 text-center px-2">
-                <h2 class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1 text-center">Referenzen & Service</h2>
-                <p class="text-slate-600 text-sm leading-relaxed">
-                    Wir sorgen für strahlende Reinheit. Gründlich, zuverlässig und mit nordischer Frische für Ihr Objekt.
+            <div class="mt-8 text-center">
+                <h2 class="text-xs font-bold text-[#767a3f] uppercase tracking-widest mb-3 italic">Persönlich & Nah</h2>
+                <p class="text-slate-600 text-[15px] leading-relaxed">
+                    Als familiäres Team ist uns eines besonders wichtig: **Sie.** Wir nehmen uns Zeit für Ihre individuellen Wünsche und sorgen mit viel Herzblut für ein Zuhause, in dem Sie sich rundum wohlfühlen. 
+                </p>
+                <p class="text-slate-600 text-[15px] mt-2 font-medium">
+                    Ehrlich, gründlich und einfach persönlich.
                 </p>
             </div>
 
-            <div class="mt-6 space-y-3">
+            <div class="mt-10 space-y-4">
                 <a href="mailto:nordlys.sauberkeit.mit.herz@gmail.com" 
-                   class="flex items-center justify-center gap-2 w-full text-center py-3 px-4 bg-[#767a3f] text-white rounded-lg font-semibold hover:bg-[#5f6332] transition shadow-md">
-                   <span>✉️</span> E-Mail senden
+                   class="flex items-center justify-center gap-3 w-full py-4 bg-[#767a3f] text-white rounded-2xl font-bold hover:bg-[#5f6332] transition shadow-lg active:scale-95">
+                   <span class="text-lg">✉️</span> E-Mail schreiben
                 </a>
                 
-                <div class="flex gap-3">
+                <div class="flex gap-4">
                     <a href="galerie.html" 
-                       class="flex-1 flex items-center justify-center gap-2 py-3 border-2 border-[#767a3f] rounded-lg text-[#767a3f] font-bold hover:bg-[#767a3f] hover:text-white transition text-sm">
-                       <span>📸</span> Galerie
+                       class="flex-1 flex items-center justify-center gap-2 py-3 border-2 border-[#767a3f] rounded-2xl text-[#767a3f] font-bold hover:bg-[#767a3f] hover:text-white transition text-sm">
+                       <span>📸</span> Einblicke
                     </a>
                     <a href="tel:+49123456789" 
-                       class="flex-1 flex items-center justify-center gap-2 py-3 border-2 border-[#767a3f] rounded-lg text-[#767a3f] font-bold hover:bg-[#767a3f] hover:text-white transition text-sm">
+                       class="flex-1 flex items-center justify-center gap-2 py-3 border-2 border-[#767a3f] rounded-2xl text-[#767a3f] font-bold hover:bg-[#767a3f] hover:text-white transition text-sm">
                        <span>📞</span> Anrufen
                     </a>
                 </div>
             </div>
 
-            <div class="mt-8 pt-4 text-center">
-                <p class="text-[10px] text-slate-400 uppercase tracking-[0.2em]">Kappeln & Umgebung</p>
+            <div class="mt-10 pt-6 border-t border-slate-50 text-center">
+                <p class="text-[11px] text-slate-400 font-medium tracking-wide">
+                    📍 Mit Liebe für Kappeln & Umgebung
+                </p>
             </div>
         </div>
     </div>
