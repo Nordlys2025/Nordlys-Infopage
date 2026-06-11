@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nordlys - Sauberkeit mit Herz</title>
+    <title>Nordlys – Sauberkeit mit Herz | Kappeln & Schlei-Region</title>
+    <meta name="description" content="Ihr zuverlässiger Partner für Reinigung im Raum Kappeln. Ehrlich, gründlich und persönlich – für Ferienwohnungen & Privathaushalte.">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .bg-structure {
             background-color: #f2f3ea;
-            /* Ein ganz feines Punktmuster für eine papierähnliche Haptik */
             background-image: radial-gradient(#d1d2c7 0.8px, transparent 0.8px);
             background-size: 12px 12px;
         }
     </style>
 </head>
-<body class="bg-structure flex items-center justify-center min-h-screen p-4 font-sans text-slate-800">
+<body class="bg-structure flex flex-col items-center justify-center min-h-screen p-4 font-sans text-slate-800">
 
-    <div class="max-w-sm w-full bg-white rounded-3xl shadow-2xl overflow-hidden transform transition hover:scale-[1.02] duration-300">
+    <!-- Hauptkarte -->
+    <div class="max-w-sm w-full bg-white rounded-3xl shadow-2xl overflow-hidden transform transition hover:scale-[1.01] duration-300 mb-6">
         <div class="h-28 bg-[#767a3f] relative">
             <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/canvas-orange.png')]"></div>
         </div>
         
         <div class="px-8 pb-10">
+            <!-- Logo Container -->
             <div class="relative -mt-16 flex justify-center">
                 <div class="bg-white p-1 rounded-full shadow-xl overflow-hidden w-32 h-32 border-4 border-white">
                     <img src="images/Nordlys_Logo_Transparent.png" 
@@ -30,46 +32,70 @@
                 </div>
             </div>
 
+            <!-- Header Text -->
             <div class="text-center mt-6">
                 <h1 class="text-2xl font-bold tracking-tight text-slate-900">Stefanie Timm & Jannik Hein</h1>
                 <p class="text-[#767a3f] font-bold uppercase text-[10px] tracking-[0.2em] mt-1">Nordlys – Sauberkeit mit Herz</p>
             </div>
 
+            <!-- Beschreibung -->
             <div class="mt-8 text-center">
                 <h2 class="text-xs font-bold text-[#767a3f] uppercase tracking-widest mb-3 italic">Persönlich & Nah</h2>
                 <p class="text-slate-600 text-[15px] leading-relaxed">
-                    Als familiäres Team ist uns eines besonders wichtig: **Sie.** Wir nehmen uns Zeit für Ihre individuellen Wünsche und sorgen mit viel Herzblut für eine Umgebung, in der Sie und Ihre Gäste sich rundum wohlfühlen. 
+                    Als familiäres Team ist uns eines besonders wichtig: <strong class="text-slate-900 font-semibold">Sie.</strong> Wir nehmen uns Zeit für Ihre individuellen Wünsche und sorgen mit viel Herzblut für eine Umgebung, in der Sie und Ihre Gäste sich rundum wohlfühlen. 
                 </p>
                 <p class="text-slate-600 text-[15px] mt-2 font-medium">
                     Ehrlich, gründlich und einfach persönlich.
                 </p>
             </div>
 
-            <div class="mt-10 space-y-4">
+            <!-- Kurz-Leistungen (Neu: Schafft direkt Klarheit) -->
+            <div class="mt-6 flex flex-wrap justify-center gap-2">
+                <span class="text-[11px] font-medium bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full">Ferienobjekte</span>
+                <span class="text-[11px] font-medium bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full">Privathaushalte</span>
+                <span class="text-[11px] font-medium bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full">Gewerbe</span>
+            </div>
+
+            <!-- Interaktions-Buttons -->
+            <div class="mt-8 space-y-4">
+                <!-- E-Mail -->
                 <a href="mailto:nordlys.sauberkeit.mit.herz@gmail.com" 
-                   class="flex items-center justify-center gap-3 w-full py-4 bg-[#767a3f] text-white rounded-2xl font-bold hover:bg-[#5f6332] transition shadow-lg active:scale-95">
-                   <span class="text-lg">✉️</span> E-Mail schreiben
+                   class="flex items-center justify-center gap-3 w-full py-4 bg-[#767a3f] text-white rounded-2xl font-bold hover:bg-[#5f6332] transition shadow-lg active:scale-95 group">
+                    <svg class="w-5 h-5 fill-current transition-transform group-hover:scale-110" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    E-Mail schreiben
                 </a>
                 
                 <div class="flex gap-4">
+                    <!-- Galerie -->
                     <a href="galerie.html" 
-                       class="flex-1 flex items-center justify-center gap-2 py-3 border-2 border-[#767a3f] rounded-2xl text-[#767a3f] font-bold hover:bg-[#767a3f] hover:text-white transition text-sm">
-                       <span>📸</span> Einblicke
+                       class="flex-1 flex items-center justify-center gap-2 py-3 border-2 border-[#767a3f] rounded-2xl text-[#767a3f] font-bold hover:bg-[#767a3f] hover:text-white transition text-sm group">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                        Einblicke
                     </a>
+                    <!-- Telefon -->
                     <a href="tel:+4917634231097" 
-                       class="flex-1 flex items-center justify-center gap-2 py-3 border-2 border-[#767a3f] rounded-2xl text-[#767a3f] font-bold hover:bg-[#767a3f] hover:text-white transition text-sm">
-                       <span>📞</span> Anrufen
+                       class="flex-1 flex items-center justify-center gap-2 py-3 border-2 border-[#767a3f] rounded-2xl text-[#767a3f] font-bold hover:bg-[#767a3f] hover:text-white transition text-sm group">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        Anrufen
                     </a>
                 </div>
             </div>
 
-            <div class="mt-10 pt-6 border-t border-slate-50 text-center">
-                <p class="text-[11px] text-slate-400 font-medium tracking-wide">
-                    📍 Mit Liebe für Kappeln & Umgebung
+            <!-- Regionaler Bezug -->
+            <div class="mt-8 pt-5 border-t border-slate-100 text-center">
+                <p class="text-[11px] text-slate-400 font-medium tracking-wide flex items-center justify-center gap-1">
+                    <span>📍</span> Mit Liebe für Kappeln & Umgebung
                 </p>
             </div>
         </div>
     </div>
+
+    <!-- Rechtlicher Footer (Neu & essenziell für gewerbliche Seiten) -->
+    <footer class="text-center text-[11px] text-slate-400 space-x-3 pb-4">
+        <a href="impressum.html" class="hover:text-slate-600 transition underline decoration-dotted">Impressum</a>
+        <span>•</span>
+        <a href="datenschutz.html" class="hover:text-slate-600 transition underline decoration-dotted">Datenschutz</a>
+    </footer>
 
 </body>
 </html>
