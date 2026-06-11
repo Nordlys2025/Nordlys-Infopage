@@ -107,16 +107,24 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <!-- Bild-Card 5: Platzhalter Küche -->
                     
-<!-- Bild-Card 5: Klickbare Küche -->
+<!-- Bild-Card 5: Klickbare Küche mit funktionierender Vorschau -->
 <div class="group relative bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 h-64">
-    <!-- Der Link umhüllt das Bild und das Overlay -->
-    <a href="images/Küche Armatur.jpg" target="_blank" rel="noopener noreferrer" class="block w-full h-full cursor-zoom-in">
-        <img src="images/DEIN_BILDNAME.jpg" 
+    <!-- Hier ist der Fix: relative, w-full und h-full sorgen dafür, dass das Overlay perfekt sitzt -->
+    <a href="images/Küche Armatur.jpg" target="_blank" rel="noopener noreferrer" class="relative block w-full h-full cursor-zoom-in">
+        
+        <!-- Das Bild -->
+        <img src="images/Küche Armatur.jpg" 
              alt="Saubere, streifenfreie Arbeitsflächen und Kochfeld in einer Ferienwohnung" 
              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+        
+        <!-- Die Mini-Vorschau (Overlay) -->
         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-            <p class="text-white text-xs font-medium">Glanz im Detail: Tiefenreine und streifenfreie Oberflächen in der Küche. <span class="underline block mt-1 opacity-75">🔍 Klicken zum Vergrößern</span></p>
+            <p class="text-white text-xs font-medium">
+                Glanz im Detail: Tiefenreine und streifenfreie Oberflächen in der Küche. 
+                <span class="underline block mt-1 opacity-75">🔍 Klicken zum Vergrößern</span>
+            </p>
         </div>
+        
     </a>
 </div>
 
