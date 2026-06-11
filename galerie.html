@@ -34,7 +34,7 @@
         <!-- Galerie-Inhalt -->
         <div class="px-6 py-8 space-y-10">
             
-            <!-- Sektion 1: Schlafbereich -->
+            <!-- SEKTION 1: SCHLAFBEREICH (KOMPLETTER SLIDER) -->
             <div class="space-y-4">
                 <div class="border-b border-slate-100 pb-2">
                     <h2 class="text-sm font-bold text-[#767a3f] uppercase tracking-widest flex items-center gap-2">
@@ -43,34 +43,42 @@
                     <p class="text-xs text-slate-400 mt-0.5">Präzise Falttechniken, glatte Laken und makellose Symmetrie für den ersten Eindruck des Gastes.</p>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <!-- Bild-Card 1: Klickbares Schlafzimmer-Bild -->
-                    <div class="group relative bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 h-64">
-                        <a href="images/galerie_schlafzimmer_01.jpg" target="_blank" rel="noopener noreferrer" class="relative block w-full h-full cursor-zoom-in">
-                            <img src="images/galerie_schlafzimmer_01.jpg" 
-                                 alt="Perfekt hergerichtetes Doppelbett mit drapierten Handtüchern im Hotelstil" 
-                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <div class="group relative bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 h-72">
+                    <div class="w-full h-full relative">
+                        <!-- Schlafen Bild 1 -->
+                        <a href="images/galerie_schlafzimmer_01.jpg" target="_blank" rel="noopener noreferrer" class="bedroom-slide relative block w-full h-full cursor-zoom-in">
+                            <img src="images/galerie_schlafzimmer_01.jpg" alt="Perfekt hergerichtetes Doppelbett" class="w-full h-full object-cover">
                             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                                <p class="text-white text-xs font-medium">
-                                    Liebe zum Detail: Akkurates Kissen-Styling & handgefaltete Handtuch-Fächer.
-                                    <span class="underline block mt-1 opacity-75">🔍 Klicken zum Vergrößern</span>
-                                </p>
+                                <p class="text-white text-xs font-medium">Liebe zum Detail: Akkurates Kissen-Styling & handgefaltete Handtuch-Fächer. <span class="underline block mt-1 opacity-75">🔍 Klicken für Vollbild</span></p>
+                            </div>
+                        </a>
+                        <!-- Schlafen Bild 2 -->
+                        <a href="images/galerie_schlafzimmer_02.jpg" target="_blank" rel="noopener noreferrer" class="bedroom-slide hidden relative block w-full h-full cursor-zoom-in">
+                            <img src="images/galerie_schlafzimmer_02.jpg" alt="Faltenfreie Kissen" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                <p class="text-white text-xs font-medium">Präzision: Faltenfreie Kissen und perfekt glatt gezogene Bettbezüge. <span class="underline block mt-1 opacity-75">🔍 Klicken für Vollbild</span></p>
+                            </div>
+                        </a>
+                        <!-- Schlafen Bild 3 -->
+                        <a href="images/galerie_schlafzimmer_03.jpg" target="_blank" rel="noopener noreferrer" class="bedroom-slide hidden relative block w-full h-full cursor-zoom-in">
+                            <img src="images/galerie_schlafzimmer_03.jpg" alt="Schlafzimmer Details" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                <p class="text-white text-xs font-medium">Wohlfühlatmosphäre: Einladend hergerichteter Schlafbereich. <span class="underline block mt-1 opacity-75">🔍 Klicken für Vollbild</span></p>
                             </div>
                         </a>
                     </div>
-
-                    <!-- Bild-Card 2: Platzhalter Schlafzimmer -->
-                    <div class="group relative bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 h-64 flex flex-col items-center justify-center p-4 text-center">
-                        <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 mb-2">
-                            <span class="text-lg">📸</span>
-                        </div>
-                        <p class="text-xs font-semibold text-slate-500">Nächstes Detailmotiv</p>
-                        <p class="text-[11px] text-slate-400 max-w-[200px] mt-1">Ersetze diesen Block im Code durch dein nächstes Foto (z. B. eine Nahaufnahme).</p>
+                    <button onclick="moveSlide('bedroom', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-[#767a3f] shadow-md flex items-center justify-center font-bold text-sm transition active:scale-90 z-20">❮</button>
+                    <button onclick="moveSlide('bedroom', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-[#767a3f] shadow-md flex items-center justify-center font-bold text-sm transition active:scale-90 z-20">❯</button>
+                    
+                    <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
+                        <span class="bedroom-dot w-2 h-2 rounded-full bg-white shadow-sm"></span>
+                        <span class="bedroom-dot w-2 h-2 rounded-full bg-white/40 shadow-sm"></span>
+                        <span class="bedroom-dot w-2 h-2 rounded-full bg-white/40 shadow-sm"></span>
                     </div>
                 </div>
             </div>
 
-            <!-- Sektion 2: Badezimmer -->
+            <!-- SEKTION 2: BADEZIMMER (JETZT AUCH ALS KOMPLETTER SLIDER) -->
             <div class="space-y-4">
                 <div class="border-b border-slate-100 pb-2">
                     <h2 class="text-sm font-bold text-[#767a3f] uppercase tracking-widest flex items-center gap-2">
@@ -79,28 +87,42 @@
                     <p class="text-xs text-slate-400 mt-0.5">Kalkfreie Armaturen, streifenfreie Glaswände und tiefenreine Oberflächen für absolute Sicherheit.</p>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <!-- Bild-Card 3: Platzhalter Bad 1 -->
-                    <div class="group relative bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 h-64 flex flex-col items-center justify-center p-4 text-center">
-                        <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 mb-2">
-                            <span class="text-lg">🚿</span>
-                        </div>
-                        <p class="text-xs font-semibold text-slate-500">Spiegelnde Armaturen</p>
-                        <p class="text-[11px] text-slate-400 max-w-[200px] mt-1">Hier passt ein hochauflösendes Detailbild eines perfekt gereinigten Waschbeckens hin.</p>
+                <div class="group relative bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 h-72">
+                    <div class="w-full h-full relative">
+                        <!-- Bad Bild 1 -->
+                        <a href="images/bad_01.jpg" target="_blank" rel="noopener noreferrer" class="bathroom-slide relative block w-full h-full cursor-zoom-in">
+                            <img src="images/bad_01.jpg" alt="Spiegelnde Badarmaturen" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                <p class="text-white text-xs font-medium">Spiegelnde Armaturen: Rückstandsfrei gereinigt und trockengewischt. <span class="underline block mt-1 opacity-75">🔍 Klicken für Vollbild</span></p>
+                            </div>
+                        </a>
+                        <!-- Bad Bild 2 -->
+                        <a href="images/bad_02.jpg" target="_blank" rel="noopener noreferrer" class="bathroom-slide hidden relative block w-full h-full cursor-zoom-in">
+                            <img src="images/bad_02.jpg" alt="Das Hotel-Dreieck auf Toilettenpapier" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                <p class="text-white text-xs font-medium">Das Hotel-Dreieck: Kleine Gesten, die Ihre Gäste willkommen heißen. <span class="underline block mt-1 opacity-75">🔍 Klicken für Vollbild</span></p>
+                            </div>
+                        </a>
+                        <!-- Bad Bild 3 -->
+                        <a href="images/bad_03.jpg" target="_blank" rel="noopener noreferrer" class="bathroom-slide hidden relative block w-full h-full cursor-zoom-in">
+                            <img src="images/bad_03.jpg" alt="Streifenfreie Duschwand" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                <p class="text-white text-xs font-medium">Glasklare Optik: Streifenfreie Duschwände und makellose Fliesen. <span class="underline block mt-1 opacity-75">🔍 Klicken für Vollbild</span></p>
+                            </div>
+                        </a>
                     </div>
-
-                    <!-- Bild-Card 4: Platzhalter Bad 2 -->
-                    <div class="group relative bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 h-64 flex flex-col items-center justify-center p-4 text-center">
-                        <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 mb-2">
-                            <span class="text-lg">🧻</span>
-                        </div>
-                        <p class="text-xs font-semibold text-slate-500">Das Hotel-Dreieck</p>
-                        <p class="text-[11px] text-slate-400 max-w-[200px] mt-1">Ein feines Nahaufnahme-Bild der akkurat gefalteten Toilettenpapier-Rolle.</p>
+                    <button onclick="moveSlide('bathroom', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-[#767a3f] shadow-md flex items-center justify-center font-bold text-sm transition active:scale-90 z-20">❮</button>
+                    <button onclick="moveSlide('bathroom', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-[#767a3f] shadow-md flex items-center justify-center font-bold text-sm transition active:scale-90 z-20">❯</button>
+                    
+                    <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
+                        <span class="bathroom-dot w-2 h-2 rounded-full bg-white shadow-sm"></span>
+                        <span class="bathroom-dot w-2 h-2 rounded-full bg-white/40 shadow-sm"></span>
+                        <span class="bathroom-dot w-2 h-2 rounded-full bg-white/40 shadow-sm"></span>
                     </div>
                 </div>
             </div>
 
-            <!-- Sektion 3: Küche -->
+            <!-- SEKTION 3: KÜCHE (KOMPLETTER SLIDER) -->
             <div class="space-y-4">
                 <div class="border-b border-slate-100 pb-2">
                     <h2 class="text-sm font-bold text-[#767a3f] uppercase tracking-widest flex items-center gap-2">
@@ -109,69 +131,37 @@
                     <p class="text-xs text-slate-400 mt-0.5">Gereinigte Fronten, krümelfreie Schubladen und ein perfekt ausgewischtes, trockenes Spülbecken.</p>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <!-- Bild-Card 5: Interaktiver Küchen-Slider -->
-                    <div class="group relative bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 h-64">
-                        
-                        <!-- Die Bilder-Hülle (Hier liegen alle Küchenbilder drin) -->
-                        <div class="w-full h-full relative">
-                            <!-- Slider Bild 1 (Wird standardmäßig angezeigt) -->
-                            <a href="images/kueche_01.jpg" target="_blank" rel="noopener noreferrer" class="kitchen-slide relative block w-full h-full cursor-zoom-in">
-                                <img src="images/kueche_01.jpg" alt="Saubere Küche Oberflächen" class="w-full h-full object-cover">
-                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                                    <p class="text-white text-xs font-medium">
-                                        Küchen-Glanz: Streifenfreie Oberflächen. 
-                                        <span class="underline block mt-1 opacity-75">🔍 Klicken für Vollbild</span>
-                                    </p>
-                                </div>
-                            </a>
-
-                            <!-- Slider Bild 2 (aktuell versteckt durch 'hidden') -->
-                            <a href="images/kueche_02.jpg" target="_blank" rel="noopener noreferrer" class="kitchen-slide hidden relative block w-full h-full cursor-zoom-in">
-                                <img src="images/kueche_02.jpg" alt="Sauberes Spülbecken" class="w-full h-full object-cover">
-                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                                    <p class="text-white text-xs font-medium">
-                                        Details: Kalkfreies und trockenes Spülbecken. 
-                                        <span class="underline block mt-1 opacity-75">🔍 Klicken für Vollbild</span>
-                                    </p>
-                                </div>
-                            </a>
-
-                            <!-- Slider Bild 3 (aktuell versteckt durch 'hidden') -->
-                            <a href="images/kueche_03.jpg" target="_blank" rel="noopener noreferrer" class="kitchen-slide hidden relative block w-full h-full cursor-zoom-in">
-                                <img src="images/kueche_03.jpg" alt="Sortierter Geschirrschrank" class="w-full h-full object-cover">
-                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                                    <p class="text-white text-xs font-medium">
-                                        Ordnung: Perfekt ausgerichtetes Geschirr. 
-                                        <span class="underline block mt-1 opacity-75">🔍 Klicken für Vollbild</span>
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Pfeile zum Durchklicken -->
-                        <button onclick="changeSlide(-1)" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-[#767a3f] shadow-md flex items-center justify-center font-bold text-sm transition active:scale-90 z-20">
-                            ❮
-                        </button>
-                        <button onclick="changeSlide(1)" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-[#767a3f] shadow-md flex items-center justify-center font-bold text-sm transition active:scale-90 z-20">
-                            ❯
-                        </button>
-
-                        <!-- Positions-Punkte unten -->
-                        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
-                            <span class="kitchen-dot w-2 h-2 rounded-full bg-white shadow-sm"></span>
-                            <span class="kitchen-dot w-2 h-2 rounded-full bg-white/40 shadow-sm"></span>
-                            <span class="kitchen-dot w-2 h-2 rounded-full bg-white/40 shadow-sm"></span>
-                        </div>
+                <div class="group relative bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 h-72">
+                    <div class="w-full h-full relative">
+                        <!-- Küche Bild 1 -->
+                        <a href="images/kueche_01.jpg" target="_blank" rel="noopener noreferrer" class="kitchen-slide relative block w-full h-full cursor-zoom-in">
+                            <img src="images/kueche_01.jpg" alt="Saubere Küche Oberflächen" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                <p class="text-white text-xs font-medium">Küchen-Glanz: Streifenfreie Oberflächen und reine Kochfelder. <span class="underline block mt-1 opacity-75">🔍 Klicken für Vollbild</span></p>
+                            </div>
+                        </a>
+                        <!-- Küche Bild 2 -->
+                        <a href="images/kueche_02.jpg" target="_blank" rel="noopener noreferrer" class="kitchen-slide hidden relative block w-full h-full cursor-zoom-in">
+                            <img src="images/kueche_02.jpg" alt="Sauberes Spülbecken" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                <p class="text-white text-xs font-medium">Details: Kalkfreies und trocken nachgewischtes Spülbecken. <span class="underline block mt-1 opacity-75">🔍 Klicken für Vollbild</span></p>
+                            </div>
+                        </a>
+                        <!-- Küche Bild 3 -->
+                        <a href="images/kueche_03.jpg" target="_blank" rel="noopener noreferrer" class="kitchen-slide hidden relative block w-full h-full cursor-zoom-in">
+                            <img src="images/kueche_03.jpg" alt="Sortierter Geschirrschrank" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                <p class="text-white text-xs font-medium">Ordnung: Perfekt ausgerichtetes Geschirr in den Schränken. <span class="underline block mt-1 opacity-75">🔍 Klicken für Vollbild</span></p>
+                            </div>
+                        </a>
                     </div>
-
-                    <!-- Bild-Card 6: Platzhalter Küche 2 -->
-                    <div class="group relative bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 h-64 flex flex-col items-center justify-center p-4 text-center">
-                        <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 mb-2">
-                            <span class="text-lg">🍽️</span>
-                        </div>
-                        <p class="text-xs font-semibold text-slate-500">Symmetrie im Schrank</p>
-                        <p class="text-[11px] text-slate-400 max-w-[200px] mt-1">Ein Blick in den ordentlich sortierten Geschirrschrank für den perfekten Ersteindruck.</p>
+                    <button onclick="moveSlide('kitchen', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-[#767a3f] shadow-md flex items-center justify-center font-bold text-sm transition active:scale-90 z-20">❮</button>
+                    <button onclick="moveSlide('kitchen', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-[#767a3f] shadow-md flex items-center justify-center font-bold text-sm transition active:scale-90 z-20">❯</button>
+                    
+                    <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
+                        <span class="kitchen-dot w-2 h-2 rounded-full bg-white shadow-sm"></span>
+                        <span class="kitchen-dot w-2 h-2 rounded-full bg-white/40 shadow-sm"></span>
+                        <span class="kitchen-dot w-2 h-2 rounded-full bg-white/40 shadow-sm"></span>
                     </div>
                 </div>
             </div>
@@ -192,27 +182,31 @@
         © 2026 Nordlys – Sauberkeit mit Herz
     </footer>
 
-    <!-- JavaScript für die Steuerung des Küchen-Sliders -->
+    <!-- INTELLIGENTES JAVASCRIPT (Steuert alle Slider mit 3 Bildern unabhängig) -->
     <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.kitchen-slide');
-        const dots = document.querySelectorAll('.kitchen-dot');
+        const sliderStates = {
+            bedroom: 0,
+            bathroom: 0,
+            kitchen: 0
+        };
 
-        function changeSlide(direction) {
-            // Aktuelles Bild und Punkt ausblenden / ausgrauen
-            slides[currentSlide].classList.add('hidden');
-            dots[currentSlide].classList.replace('bg-white', 'bg-white/40');
+        function moveSlide(sliderId, direction) {
+            const slides = document.querySelectorAll(`.${sliderId}-slide`);
+            const dots = document.querySelectorAll(`.${sliderId}-dot`);
+            let currentIndex = sliderStates[sliderId];
 
-            // Neuen Bildindex berechnen
-            currentSlide += direction;
+            slides[currentIndex].classList.add('hidden');
+            dots[currentIndex].classList.replace('bg-white', 'bg-white/40');
 
-            // Endlos-Schleife (wenn am Ende, fange vorne an und umgekehrt)
-            if (currentSlide >= slides.length) currentSlide = 0;
-            if (currentSlide < 0) currentSlide = slides.length - 1;
+            currentIndex += direction;
 
-            // Neues Bild und Punkt einblenden / aktivieren
-            slides[currentSlide].classList.remove('hidden');
-            dots[currentSlide].classList.replace('bg-white/40', 'bg-white');
+            if (currentIndex >= slides.length) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = slides.length - 1;
+
+            sliderStates[sliderId] = currentIndex;
+
+            slides[currentIndex].classList.remove('hidden');
+            dots[currentIndex].classList.replace('bg-white/40', 'bg-white');
         }
     </script>
 
