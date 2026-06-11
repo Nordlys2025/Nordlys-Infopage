@@ -1,1 +1,145 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einblicke & Referenzen | Nordlys – Sauberkeit mit Herz</title>
+    <meta name="description" content="Überzeugen Sie sich von unserer Gründlichkeit. Bilder und Impressionen unserer Arbeit in Ferienwohnungen und Objekten rund um Kappeln.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .bg-structure {
+            background-color: #f2f3ea;
+            background-image: radial-gradient(#d1d2c7 0.8px, transparent 0.8px);
+            background-size: 12px 12px;
+        }
+    </style>
+</head>
+<body class="bg-structure flex flex-col items-center justify-start min-h-screen p-4 font-sans text-slate-800">
 
+    <!-- Hauptcontainer für die Galerie -->
+    <div class="max-w-2xl w-full bg-white rounded-3xl shadow-2xl overflow-hidden my-6">
+        
+        <!-- Header im Corporate Design -->
+        <div class="p-6 bg-[#767a3f] relative flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/canvas-orange.png')]"></div>
+            <div class="relative z-10">
+                <h1 class="text-white font-bold text-xl">Unsere Einblicke</h1>
+                <p class="text-slate-200 text-xs uppercase tracking-wider mt-0.5">Qualität, die man sehen kann</p>
+            </div>
+            <a href="index.html" class="relative z-10 inline-flex items-center justify-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-xl font-medium transition text-xs backdrop-blur-sm self-start sm:self-auto">
+                ← Zur Startseite
+            </a>
+        </div>
+        
+        <!-- Galerie-Inhalt -->
+        <div class="px-6 py-8 space-y-10">
+            
+            <!-- Sektion 1: Schlafbereich -->
+            <div class="space-y-4">
+                <div class="border-b border-slate-100 pb-2">
+                    <h2 class="text-sm font-bold text-[#767a3f] uppercase tracking-widest flex items-center gap-2">
+                        <span>🛏️</span> Schlafen & Wohlfühlen
+                    </h2>
+                    <p class="text-xs text-slate-400 mt-0.5">Präzise Falttechniken, glatte Laken und makellose Symmetrie für den ersten Eindruck des Gastes.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Bild-Card 1: Euer hochgeladenes Schlafzimmer-Bild -->
+                    <div class="group relative bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 h-64">
+                        <img src="images/galerie_schlafzimmer_01.jpg" 
+                             alt="Perfekt hergerichtetes Doppelbett mit drapierten Handtüchern im Hotelstil" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                            <p class="text-white text-xs font-medium">Liebe zum Detail: Akkurates Kissen-Styling & handgefaltete Handtuch-Fächer.</p>
+                        </div>
+                    </div>
+
+                    <!-- Bild-Card 2: Platzhalter für ein weiteres Schlafzimmer-Bild -->
+                    <div class="group relative bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 h-64 flex flex-col items-center justify-center p-4 text-center">
+                        <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 mb-2">
+                            <span class="text-lg">📸</span>
+                        </div>
+                        <p class="text-xs font-semibold text-slate-500">Nächstes Detailmotiv</p>
+                        <p class="text-[11px] text-slate-400 max-w-[200px] mt-1">Ersetze diesen Block im Code durch dein nächstes Foto (z. B. eine Nahaufnahme).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sektion 2: Badezimmer -->
+            <div class="space-y-4">
+                <div class="border-b border-slate-100 pb-2">
+                    <h2 class="text-sm font-bold text-[#767a3f] uppercase tracking-widest flex items-center gap-2">
+                        <span>✨</span> Glanz & Hygiene im Bad
+                    </h2>
+                    <p class="text-xs text-slate-400 mt-0.5">Kalkfreie Armaturen, streifenfreie Glaswände und tiefenreine Oberflächen für absolute Sicherheit.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Bild-Card 3: Platzhalter Bad -->
+                    <div class="group relative bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 h-64 flex flex-col items-center justify-center p-4 text-center">
+                        <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 mb-2">
+                            <span class="text-lg">🚿</span>
+                        </div>
+                        <p class="text-xs font-semibold text-slate-500">Spiegelnde Armaturen</p>
+                        <p class="text-[11px] text-slate-400 max-w-[200px] mt-1">Hier passt ein hochauflösendes Detailbild eines perfekt gereinigten Waschbeckens hin.</p>
+                    </div>
+
+                    <!-- Bild-Card 4: Platzhalter Bad 2 -->
+                    <div class="group relative bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 h-64 flex flex-col items-center justify-center p-4 text-center">
+                        <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 mb-2">
+                            <span class="text-lg">🧻</span>
+                        </div>
+                        <p class="text-xs font-semibold text-slate-500">Das Hotel-Dreieck</p>
+                        <p class="text-[11px] text-slate-400 max-w-[200px] mt-1">Ein feines Nahaufnahme-Bild der akkurat gefalteten Toilettenpapier-Rolle.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sektion 3: Küche -->
+            <div class="space-y-4">
+                <div class="border-b border-slate-100 pb-2">
+                    <h2 class="text-sm font-bold text-[#767a3f] uppercase tracking-widest flex items-center gap-2">
+                        <span>🍳</span> Ordnung & Frische in der Küche
+                    </h2>
+                    <p class="text-xs text-slate-400 mt-0.5">Gereinigte Fronten, krümelfreie Schubladen und ein perfekt ausgewischtes, trockenes Spülbecken.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Bild-Card 5: Platzhalter Küche -->
+                    <div class="group relative bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 h-64 flex flex-col items-center justify-center p-4 text-center">
+                        <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 mb-2">
+                            <span class="text-lg">🧼</span>
+                        </div>
+                        <p class="text-xs font-semibold text-slate-500">Streifenfreie Arbeitsflächen</p>
+                        <p class="text-[11px] text-slate-400 max-w-[200px] mt-1">Zeige hier z. B. den Glanz eines Ceranfeldes oder einer Edelstahl-Spüle.</p>
+                    </div>
+
+                    <!-- Bild-Card 6: Platzhalter Küche 2 -->
+                    <div class="group relative bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 h-64 flex flex-col items-center justify-center p-4 text-center">
+                        <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 mb-2">
+                            <span class="text-lg">🍽️</span>
+                        </div>
+                        <p class="text-xs font-semibold text-slate-500">Symmetrie im Schrank</p>
+                        <p class="text-[11px] text-slate-400 max-w-[200px] mt-1">Ein Blick in den ordentlich sortierten Geschirrschrank für den perfekten Ersteindruck.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Unterer Aktionsbereich -->
+            <div class="pt-6 border-t border-slate-100 text-center">
+                <p class="text-xs text-slate-500 mb-4">Überzeugen Sie sich selbst von unserem Service für Ihre Immobilie.</p>
+                <a href="mailto:nordlys.sauberkeit.mit.herz@gmail.com" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#767a3f] hover:bg-[#5f6332] text-white rounded-xl font-bold transition text-xs shadow-md active:scale-95">
+                    ✉️ Jetzt unverbindlich anfragen
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Kleiner Footer -->
+    <footer class="text-center text-[11px] text-slate-400 pb-4">
+        © 2026 Nordlys – Sauberkeit mit Herz
+    </footer>
+
+</body>
+</html>
