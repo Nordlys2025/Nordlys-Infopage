@@ -44,17 +44,22 @@
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <!-- Bild-Card 1: Euer hochgeladenes Schlafzimmer-Bild -->
+                    <!-- Bild-Card 1: Klickbares Schlafzimmer-Bild -->
                     <div class="group relative bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 h-64">
-                        <img src="images/galerie_schlafzimmer_01.jpg" 
-                             alt="Perfekt hergerichtetes Doppelbett mit drapierten Handtüchern im Hotelstil" 
-                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                            <p class="text-white text-xs font-medium">Liebe zum Detail: Akkurates Kissen-Styling & handgefaltete Handtuch-Fächer.</p>
-                        </div>
+                        <a href="images/galerie_schlafzimmer_01.jpg" target="_blank" rel="noopener noreferrer" class="relative block w-full h-full cursor-zoom-in">
+                            <img src="images/galerie_schlafzimmer_01.jpg" 
+                                 alt="Perfekt hergerichtetes Doppelbett mit drapierten Handtüchern im Hotelstil" 
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                <p class="text-white text-xs font-medium">
+                                    Liebe zum Detail: Akkurates Kissen-Styling & handgefaltete Handtuch-Fächer.
+                                    <span class="underline block mt-1 opacity-75">🔍 Klicken zum Vergrößern</span>
+                                </p>
+                            </div>
+                        </a>
                     </div>
 
-                    <!-- Bild-Card 2: Platzhalter für ein weiteres Schlafzimmer-Bild -->
+                    <!-- Bild-Card 2: Platzhalter Schlafzimmer -->
                     <div class="group relative bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 h-64 flex flex-col items-center justify-center p-4 text-center">
                         <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 mb-2">
                             <span class="text-lg">📸</span>
@@ -75,7 +80,7 @@
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <!-- Bild-Card 3: Platzhalter Bad -->
+                    <!-- Bild-Card 3: Platzhalter Bad 1 -->
                     <div class="group relative bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 h-64 flex flex-col items-center justify-center p-4 text-center">
                         <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-400 mb-2">
                             <span class="text-lg">🚿</span>
@@ -105,28 +110,60 @@
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <!-- Bild-Card 5: Platzhalter Küche -->
-                    
-<!-- Bild-Card 5: Klickbare Küche mit funktionierender Vorschau -->
-<div class="group relative bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 h-64">
-    <!-- Hier ist der Fix: relative, w-full und h-full sorgen dafür, dass das Overlay perfekt sitzt -->
-    <a href="images/Küche Armatur.jpg" target="_blank" rel="noopener noreferrer" class="relative block w-full h-full cursor-zoom-in">
-        
-        <!-- Das Bild -->
-        <img src="images/Küche Armatur.jpg" 
-             alt="Saubere, streifenfreie Arbeitsflächen und Kochfeld in einer Ferienwohnung" 
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-        
-        <!-- Die Mini-Vorschau (Overlay) -->
-        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-            <p class="text-white text-xs font-medium">
-                Glanz im Detail: Tiefenreine und streifenfreie Oberflächen in der Küche. 
-                <span class="underline block mt-1 opacity-75">🔍 Klicken zum Vergrößern</span>
-            </p>
-        </div>
-        
-    </a>
-</div>
+                    <!-- Bild-Card 5: Interaktiver Küchen-Slider -->
+                    <div class="group relative bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 h-64">
+                        
+                        <!-- Die Bilder-Hülle (Hier liegen alle Küchenbilder drin) -->
+                        <div class="w-full h-full relative">
+                            <!-- Slider Bild 1 (Wird standardmäßig angezeigt) -->
+                            <a href="images/kueche_01.jpg" target="_blank" rel="noopener noreferrer" class="kitchen-slide relative block w-full h-full cursor-zoom-in">
+                                <img src="images/kueche_01.jpg" alt="Saubere Küche Oberflächen" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                    <p class="text-white text-xs font-medium">
+                                        Küchen-Glanz: Streifenfreie Oberflächen. 
+                                        <span class="underline block mt-1 opacity-75">🔍 Klicken für Vollbild</span>
+                                    </p>
+                                </div>
+                            </a>
+
+                            <!-- Slider Bild 2 (aktuell versteckt durch 'hidden') -->
+                            <a href="images/kueche_02.jpg" target="_blank" rel="noopener noreferrer" class="kitchen-slide hidden relative block w-full h-full cursor-zoom-in">
+                                <img src="images/kueche_02.jpg" alt="Sauberes Spülbecken" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                    <p class="text-white text-xs font-medium">
+                                        Details: Kalkfreies und trockenes Spülbecken. 
+                                        <span class="underline block mt-1 opacity-75">🔍 Klicken für Vollbild</span>
+                                    </p>
+                                </div>
+                            </a>
+
+                            <!-- Slider Bild 3 (aktuell versteckt durch 'hidden') -->
+                            <a href="images/kueche_03.jpg" target="_blank" rel="noopener noreferrer" class="kitchen-slide hidden relative block w-full h-full cursor-zoom-in">
+                                <img src="images/kueche_03.jpg" alt="Sortierter Geschirrschrank" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                    <p class="text-white text-xs font-medium">
+                                        Ordnung: Perfekt ausgerichtetes Geschirr. 
+                                        <span class="underline block mt-1 opacity-75">🔍 Klicken für Vollbild</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Pfeile zum Durchklicken -->
+                        <button onclick="changeSlide(-1)" class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-[#767a3f] shadow-md flex items-center justify-center font-bold text-sm transition active:scale-90 z-20">
+                            ❮
+                        </button>
+                        <button onclick="changeSlide(1)" class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-[#767a3f] shadow-md flex items-center justify-center font-bold text-sm transition active:scale-90 z-20">
+                            ❯
+                        </button>
+
+                        <!-- Positions-Punkte unten -->
+                        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
+                            <span class="kitchen-dot w-2 h-2 rounded-full bg-white shadow-sm"></span>
+                            <span class="kitchen-dot w-2 h-2 rounded-full bg-white/40 shadow-sm"></span>
+                            <span class="kitchen-dot w-2 h-2 rounded-full bg-white/40 shadow-sm"></span>
+                        </div>
+                    </div>
 
                     <!-- Bild-Card 6: Platzhalter Küche 2 -->
                     <div class="group relative bg-slate-50 rounded-2xl overflow-hidden shadow-sm border border-slate-100 h-64 flex flex-col items-center justify-center p-4 text-center">
@@ -154,6 +191,30 @@
     <footer class="text-center text-[11px] text-slate-400 pb-4">
         © 2026 Nordlys – Sauberkeit mit Herz
     </footer>
+
+    <!-- JavaScript für die Steuerung des Küchen-Sliders -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.kitchen-slide');
+        const dots = document.querySelectorAll('.kitchen-dot');
+
+        function changeSlide(direction) {
+            // Aktuelles Bild und Punkt ausblenden / ausgrauen
+            slides[currentSlide].classList.add('hidden');
+            dots[currentSlide].classList.replace('bg-white', 'bg-white/40');
+
+            // Neuen Bildindex berechnen
+            currentSlide += direction;
+
+            // Endlos-Schleife (wenn am Ende, fange vorne an und umgekehrt)
+            if (currentSlide >= slides.length) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+
+            // Neues Bild und Punkt einblenden / aktivieren
+            slides[currentSlide].classList.remove('hidden');
+            dots[currentSlide].classList.replace('bg-white/40', 'bg-white');
+        }
+    </script>
 
 </body>
 </html>
