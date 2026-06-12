@@ -16,18 +16,18 @@
 </head>
 <body class="bg-structure flex flex-col items-center justify-center min-h-screen p-4 font-sans text-slate-800">
 
-    <!-- Hauptkarte: Auf Handys schmal (max-w-sm), auf Desktop breit (md:max-w-3xl) -->
-    <div class="w-full max-w-sm md:max-w-3xl bg-white rounded-3xl shadow-2xl overflow-hidden transform transition hover:scale-[1.005] duration-300 my-6">
+    <!-- Hauptkarte: Auf dem Desktop elegant verbreitert (max-w-xl), behält aber den klaren Fokus -->
+    <div class="w-full max-w-sm md:max-w-xl bg-white rounded-3xl shadow-2xl overflow-hidden transform transition hover:scale-[1.005] duration-300 my-6">
         
-        <!-- Oberer Farbbalken: Auf Desktop etwas höher für eine bessere Balance -->
-        <div class="h-28 md:h-36 bg-[#767a3f] relative">
+        <!-- Oberer Farbbalken -->
+        <div class="h-28 md:h-32 bg-[#767a3f] relative">
             <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/canvas-orange.png')]"></div>
         </div>
         
-        <div class="px-6 sm:px-8 pb-10">
+        <div class="px-6 sm:px-10 pb-10">
             
             <!-- Logo Container -->
-            <div class="relative -mt-16 md:-mt-20 flex justify-center">
+            <div class="relative -mt-16 md:-mt-18 flex justify-center">
                 <div class="bg-white p-1 rounded-full shadow-xl overflow-hidden w-32 h-32 md:w-36 md:h-36 border-4 border-white">
                     <img src="images/Nordlys_Logo_Transparent.png" 
                          alt="Nordlys Logo" 
@@ -35,7 +35,7 @@
                 </div>
             </div>
 
-            <!-- Header Text -->
+            <!-- Header Text: Perfekt ausbalanciert -->
             <div class="text-center mt-6">
                 <h1 class="text-3xl md:text-4xl font-medium tracking-[0.2em] uppercase text-[#767a3f]">
                     Nordlys
@@ -45,92 +45,82 @@
                 </p>
             </div>
 
-            <!-- Das responsive Grid: Schaltet auf Desktop (md:) in ein zwei-spaltiges Layout -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mt-10 pt-6 border-t border-slate-100">
+            <!-- Beschreibung: Fließt zentriert über die volle Breite -->
+            <div class="mt-8 md:mt-10 text-center space-y-3">
+                <h2 class="text-xs font-bold text-[#767a3f] uppercase tracking-widest italic">
+                    Persönlich & Nah
+                </h2>
+                <p class="text-slate-600 text-[15px] md:text-base leading-relaxed max-w-md mx-auto">
+                    Als familiäres Team ist uns eines besonders wichtig: <strong class="text-slate-900 font-semibold">Sie.</strong> Wir nehmen uns Zeit für Ihre individuellen Wünsche und sorgen mit viel Herzblut für eine Umgebung, in der Sie und Ihre Gäste sich rundum wohlfühlen. 
+                </p>
+                <p class="text-slate-600 text-[15px] md:text-base font-medium">
+                    Ehrlich, gründlich und einfach persönlich.
+                </p>
+            </div>
+
+            <!-- Leistungsbereich: Zentriert als edler Inhaltsblock -->
+            <div class="mt-8 md:mt-10 pt-6 md:pt-8 border-t border-slate-100">
+                <h3 class="text-xs font-bold text-[#767a3f] uppercase tracking-wider mb-5 text-center">
+                    Unsere Leistungen
+                </h3>
                 
-                <!-- LINKE SPALTE: Vorstellung & Konzept -->
-                <div class="flex flex-col justify-start text-center md:text-left space-y-4">
-                    <h2 class="text-xs font-bold text-[#767a3f] uppercase tracking-widest italic text-center md:text-left">
-                        Persönlich & Nah
-                    </h2>
-                    <p class="text-slate-600 text-[15px] leading-relaxed">
-                        Als familiäres Team ist uns eines besonders wichtig: <strong class="text-slate-900 font-semibold">Sie.</strong> Wir nehmen uns Zeit für Ihre individuellen Wünsche und sorgen mit viel Herzblut für eine Umgebung, in der Sie und Ihre Gäste sich rundum wohlfühlen. 
-                    </p>
-                    <p class="text-slate-600 text-[15px] font-medium">
-                        Ehrlich, gründlich und einfach persönlich.
-                    </p>
-                    
-                    <!-- Regionaler Bezug auf Desktop elegant links platziert, auf Mobil wandert er mit -->
-                    <div class="hidden md:flex items-center gap-1 text-[11px] text-slate-400 font-medium tracking-wide pt-4">
-                        <span>📍</span> Mit Liebe für Kappeln & Umgebung
-                    </div>
+                <!-- Die Leistungsbox zentriert den Inhalt auf großen Bildschirmen optimal -->
+                <div class="bg-slate-50/60 rounded-2xl p-4 sm:p-6 border border-slate-100 max-w-md mx-auto">
+                    <ul class="space-y-3.5 text-[14px] text-slate-600">
+                        <li class="flex items-start gap-3">
+                            <span class="text-[#767a3f] mt-0.5 font-bold">✔</span>
+                            <span><strong class="text-slate-900 font-semibold">Ferienwohnungen & -häuser:</strong> Makelloser Gästewechsel-Service inklusive Bettenbeziehen und Hotel-Details.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-[#767a3f] mt-0.5 font-bold">✔</span>
+                            <span><strong class="text-slate-900 font-semibold">Agenturen & Verwalter:</strong> Zuverlässige, ganzheitliche Betreuung von größeren Einheiten und Hausboot-Flotten.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-[#767a3f] mt-0.5 font-bold">✔</span>
+                            <span><strong class="text-slate-900 font-semibold">Ganzheitliche Fensterreinigung:</strong> Fester Bestandteil der Objektpflege – für einen streifenfreien Ausblick aufs Wasser.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-[#767a3f] mt-0.5 font-bold">✔</span>
+                            <span><strong class="text-slate-900 font-semibold">Privathaushalte:</strong> Liebevolle, diskrete und vollkommen flexible Entlastung im Alltag.</span>
+                        </li>
+                    </ul>
                 </div>
 
-                <!-- RECHTE SPALTE: Leistungen, Preise & Kontakt-Buttons -->
-                <div class="space-y-6">
-                    <div>
-                        <h3 class="text-xs font-bold text-[#767a3f] uppercase tracking-wider mb-4 text-center md:text-left">
-                            Unsere Leistungen
-                        </h3>
-                        
-                        <ul class="space-y-3 text-[14px] text-slate-600">
-                            <li class="flex items-start gap-2.5">
-                                <span class="text-[#767a3f] mt-0.5">✔</span>
-                                <span><strong class="text-slate-900 font-semibold">Ferienwohnungen & -häuser:</strong> Makelloser Gästewechsel-Service inklusive Bettenbeziehen und Hotel-Details.</span>
-                            </li>
-                            <li class="flex items-start gap-2.5">
-                                <span class="text-[#767a3f] mt-0.5">✔</span>
-                                <span><strong class="text-slate-900 font-semibold">Agenturen & Verwalter:</strong> Zuverlässige Betreuung größerer Einheiten und anspruchsvoller Hausboot-Flotten.</span>
-                            </li>
-                            <li class="flex items-start gap-2.5">
-                                <span class="text-[#767a3f] mt-0.5">✔</span>
-                                <span><strong class="text-slate-900 font-semibold">Fensterreinigung:</strong> Bei uns fester Bestandteil der Objektpflege – für streifenfreien Ausblick aufs Wasser.</span>
-                            </li>
-                            <li class="flex items-start gap-2.5">
-                                <span class="text-[#767a3f] mt-0.5">✔</span>
-                                <span><strong class="text-slate-900 font-semibold">Privathaushalte:</strong> Diskrete und vollkommen auf Ihren Rhythmus abgestimmte Entlastung.</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Info-Box für Individualität -->
-                    <div class="p-3 bg-[#f2f3ea]/50 rounded-xl border border-[#d1d2c7]/30 text-center md:text-left">
-                        <p class="text-[13px] text-slate-600 leading-relaxed font-medium">
-                            ✨ Jedes Objekt ist einzigartig: <span class="text-slate-900 font-semibold">Alle Leistungen sowie die Preise</span> werden vollkommen flexibel und <span class="text-[#767a3f] font-bold">individuell auf Ihre Bedürfnisse</span> abgestimmt.
-                        </p>
-                    </div>
-
-                    <!-- Interaktions-Buttons -->
-                    <div class="space-y-3.5 pt-2">
-                        <!-- E-Mail -->
-                        <a href="mailto:nordlys.sauberkeit.mit.herz@gmail.com" 
-                           class="flex items-center justify-center gap-3 w-full py-3.5 bg-[#767a3f] text-white rounded-2xl font-bold hover:bg-[#5f6332] transition shadow-lg active:scale-95 group text-sm">
-                            <svg class="w-4 h-4 fill-current transition-transform group-hover:scale-110" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                            E-Mail schreiben
-                        </a>
-                        
-                        <div class="flex gap-3">
-                            <!-- Galerie -->
-                            <a href="galerie.html" 
-                               class="flex-1 flex items-center justify-center gap-2 py-3 border-2 border-[#767a3f] rounded-2xl text-[#767a3f] font-bold hover:bg-[#767a3f] hover:text-white transition text-xs sm:text-sm group">
-                                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-                                Einblicke
-                            </a>
-                            <!-- Telefon -->
-                            <a href="tel:+4917634231097" 
-                               class="flex-1 flex items-center justify-center gap-2 py-3 border-2 border-[#767a3f] rounded-2xl text-[#767a3f] font-bold hover:bg-[#767a3f] hover:text-white transition text-xs sm:text-sm group">
-                                <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                                Anrufen
-                            </a>
-                        </div>
-                    </div>
-
+                <!-- Info-Box für Individualität -->
+                <div class="mt-5 p-3.5 bg-[#f2f3ea]/40 rounded-xl border border-[#d1d2c7]/30 text-center max-w-md mx-auto">
+                    <p class="text-[13px] text-slate-600 leading-relaxed font-medium">
+                        ✨ Jedes Objekt ist einzigartig: <span class="text-slate-900 font-semibold">Alle Leistungen sowie die Preise</span> werden individuell auf Ihre Bedürfnisse abgestimmt.
+                    </p>
                 </div>
             </div>
 
-            <!-- Regionaler Bezug (Nur sichtbar auf Mobilgeräten zur sauberen Strukturierung) -->
-            <div class="mt-8 pt-5 border-t border-slate-100 text-center md:hidden">
-                <p class="text-[11px] text-slate-400 font-medium tracking-wide flex items-center justify-center gap-1">
+            <!-- Interaktions-Buttons: Maximal fokussiert und sauber angeordnet -->
+            <div class="mt-8 md:mt-10 space-y-4 max-w-md mx-auto">
+                <!-- E-Mail Hauptbutton -->
+                <a href="mailto:nordlys.sauberkeit.mit.herz@gmail.com" 
+                   class="flex items-center justify-center gap-3 w-full py-4 bg-[#767a3f] text-white rounded-2xl font-bold hover:bg-[#5f6332] transition shadow-lg active:scale-95 group text-sm md:text-base">
+                    <svg class="w-4 h-4 fill-current transition-transform group-hover:scale-110" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    E-Mail schreiben
+                </a>
+                
+                <!-- Sekundäre Buttons nebeneinander -->
+                <div class="flex gap-4">
+                    <a href="galerie.html" 
+                       class="flex-1 flex items-center justify-center gap-2 py-3.5 border-2 border-[#767a3f] rounded-2xl text-[#767a3f] font-bold hover:bg-[#767a3f] hover:text-white transition text-sm group">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                        Einblicke
+                    </a>
+                    <a href="tel:+4917634231097" 
+                       class="flex-1 flex items-center justify-center gap-2 py-3.5 border-2 border-[#767a3f] rounded-2xl text-[#767a3f] font-bold hover:bg-[#767a3f] hover:text-white transition text-sm group">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        Anrufen
+                    </a>
+                </div>
+            </div>
+
+            <!-- Regionaler Bezug -->
+            <div class="mt-8 pt-5 border-t border-slate-100 text-center">
+                <p class="text-[11px] md:text-xs text-slate-400 font-medium tracking-wide flex items-center justify-center gap-1">
                     <span>📍</span> Mit Liebe für Kappeln & Umgebung
                 </p>
             </div>
