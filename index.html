@@ -22,25 +22,27 @@
 </head>
 <body class="bg-structure font-sans text-slate-800 antialiased">
 
-    <!-- NAVIGATION (Jetzt mit dem dezenten Schweif neben dem Logo) -->
+    <!-- NAVIGATION (Jetzt mit dem dezenten Schweif genau HINTER dem Firmennamen) -->
     <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             
-            <!-- Logo-Bereich mit integriertem Schweif -->
-            <div class="flex items-center gap-2 group">
-                <a href="#" class="flex items-center gap-3">
-                    <img src="images/Nordlys_Logo_Transparent.png" alt="Nordlys Logo" class="w-12 h-12 object-contain transition-transform group-hover:scale-105">
-                    <div class="flex flex-col">
-                        <span class="text-xl font-bold tracking-widest text-[#767a3f] uppercase">Nordlys</span>
-                        <span class="text-[10px] text-slate-400 uppercase tracking-wider -mt-1">Sauberkeit mit Herz</span>
-                    </div>
-                </a>
+            <!-- Logo-Bereich -->
+            <a href="#" class="flex items-center gap-3 group relative">
+                <img src="images/Nordlys_Logo_Transparent.png" alt="Nordlys Logo" class="w-12 h-12 object-contain transition-transform group-hover:scale-105 relative z-10">
                 
-                <!-- NEU: Der Schweif als eleganter, kleiner Zusatz rechts neben dem Schriftzug -->
-                <img src="Schweif nordlys.png" 
-                     alt="Nordlys Deko" 
-                     class="hidden sm:block h-10 w-auto object-contain mix-blend-screen opacity-40 ml-1 pointer-events-none select-none">
-            </div>
+                <!-- Text-Container mit absolut dahinterliegendem Schweif -->
+                <div class="flex flex-col relative py-2 pr-12">
+                    
+                    <!-- Der Schweif: Liegt exakt hinter der Schrift und fließt nach rechts weg -->
+                    <img src="Schweif nordlys.png" 
+                         alt="Nordlys Deko" 
+                         class="absolute right-0 top-1/2 -translate-y-1/2 h-14 w-auto object-contain mix-blend-screen opacity-50 z-0 pointer-events-none select-none transform scale-125 origin-left">
+                    
+                    <!-- Die Schriftzüge liegen durch z-10 sicher über dem Schweif -->
+                    <span class="text-xl font-bold tracking-widest text-[#767a3f] uppercase relative z-10">Nordlys</span>
+                    <span class="text-[10px] text-slate-400 uppercase tracking-wider -mt-1 relative z-10">Sauberkeit mit Herz</span>
+                </div>
+            </a>
             
             <!-- Desktop Menu -->
             <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
@@ -63,7 +65,7 @@
             <a href="#leistungen" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">Leistungen</a>
             <a href="#einsatzgebiet" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">Einsatzgebiet</a>
             <a href="galerie.html" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">📸 Einblicke</a>
-            <a href="#kontakt" onclick="toggleMobileMenu()" class="block text-center px-3 py-3 bg-[#767a3f] text-white font-bold rounded-xl shadow-sm">Lernen wir uns kennen</a>
+            <a href="#kontakt" onclick="toggleMobileMenu()" class="block text-center px-3 py-3 bg-[#767a3f] text-white font-bold rounded-xl shadow-sm">Jetzt anfragen</a>
         </div>
     </nav>
 
