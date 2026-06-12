@@ -58,7 +58,7 @@
         </div>
     </nav>
 
-    <!-- HERO SEKTION (Wieder komplett weiß und perfekt lesbar) -->
+    <!-- HERO SEKTION -->
     <header class="relative overflow-hidden bg-white py-20 lg:py-28 border-b border-slate-100">
         <div class="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/canvas-orange.png')]"></div>
         
@@ -197,22 +197,27 @@
         </div>
     </section>
 
-    <!-- NEUER EDIT: DER NORDLYS SCHWEIF ALS EDLER FINALE-ELEMENT IM FOOTER -->
-    <div class="w-full flex items-center justify-center pointer-events-none select-none overflow-hidden max-w-md mx-auto h-24 -mb-4">
-        <img src="Schweif nordlys.png" 
-             alt="Nordlys Schweif Deko" 
-             class="w-full h-full object-contain mix-blend-screen opacity-20 transform scale-110">
-    </div>
-
-    <!-- RECHTLICHER FOOTER -->
-    <footer class="bg-white border-t border-slate-100 py-8 text-center text-xs text-slate-400 space-y-3 relative z-10">
-        <p>© 2026 Nordlys – Nordische Objektbetreuung & Reinigung</p>
-        <div class="space-x-3">
-            <a href="impressum.html" class="hover:text-slate-600 transition underline decoration-dotted">Impressum</a>
-            <span>•</span>
-            <a href="datenschutz.html" class="hover:text-slate-600 transition underline decoration-dotted">Datenschutz</a>
+    <!-- ZUSAMMENHÄNGENDER WEISSER FOOTER-BLOCK (Zwingt das Bild zur vollen Sichtbarkeit) -->
+    <div class="bg-white w-full border-t border-slate-100 pt-10 pb-8 flex flex-col items-center justify-center">
+        
+        <!-- Der Schweif: Liegt jetzt auf reinem Weiß, wodurch das Schwarz perfekt verschwindet -->
+        <div class="w-full max-w-sm h-16 pointer-events-none select-none overflow-hidden mb-4">
+            <img src="Schweif nordlys.png" 
+                 alt="Nordlys Schweif Deko" 
+                 class="w-full h-full object-contain mix-blend-screen opacity-35 transform scale-110">
         </div>
-    </footer>
+
+        <!-- Rechtliche Links im selben weißen Block -->
+        <footer class="text-center text-xs text-slate-400 space-y-3">
+            <p>© 2026 Nordlys – Nordische Objektbetreuung & Reinigung</p>
+            <div class="space-x-3">
+                <a href="impressum.html" class="hover:text-slate-600 transition underline decoration-dotted">Impressum</a>
+                <span>•</span>
+                <a href="datenschutz.html" class="hover:text-slate-600 transition underline decoration-dotted">Datenschutz</a>
+            </div>
+        </footer>
+
+    </div>
 
     <!-- Leaflet JS für Kartenfunktionalität -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
