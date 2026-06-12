@@ -1,87 +1,99 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impressum | Nordlys – Sauberkeit mit Herz</title>
-    <meta name="robots" content="noindex, follow"> <!-- Verhindert, dass das Impressum als Hauptseite bei Google rankt -->
+    <title>Nordlys – Impressum | Zuverlässige Objektbetreuung & Reinigung</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .bg-structure {
-            background-color: #f2f3ea;
+            background-color: #f8f9f5;
             background-image: radial-gradient(#d1d2c7 0.8px, transparent 0.8px);
-            background-size: 12px 12px;
+            background-size: 16px 16px;
         }
     </style>
 </head>
-<body class="bg-structure flex flex-col items-center justify-center min-h-screen p-4 font-sans text-slate-800">
+<body class="bg-structure font-sans text-slate-800 antialiased">
 
-    <!-- Hauptkarte -->
-    <div class="max-w-md w-full bg-white rounded-3xl shadow-2xl overflow-hidden my-6">
-        <!-- Farbiger Header wie auf der Startseite -->
-        <div class="h-16 bg-[#767a3f] relative flex items-center px-6">
-            <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/canvas-orange.png')]"></div>
-            <h1 class="text-white font-bold text-lg relative z-10">Impressum</h1>
-        </div>
-        
-        <div class="px-6 py-8 space-y-6 text-[14px] leading-relaxed text-slate-600">
+    <!-- NAVIGATION -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="images/Nordlys_Logo_Transparent.png" alt="Nordlys Logo" class="w-12 h-12 object-contain transition-transform group-hover:scale-105">
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold tracking-widest text-[#767a3f] uppercase">Nordlys</span>
+                    <span class="text-[10px] text-slate-400 uppercase tracking-wider -mt-1">Sauberkeit mit Herz</span>
+                </div>
+            </a>
             
-            <!-- Anbieterkennzeichnung -->
-            <div>
-                <h2 class="text-xs font-bold text-[#767a3f] uppercase tracking-wider mb-2">Angaben gemäß § 5 DDG</h2>
-                <p class="font-semibold text-slate-900">Nordlys – Sauberkeit mit Herz GbR</p>
-                <p>Heidesiedlung 46</p>
-                <p>24376 Kappeln</p>
+            <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                <a href="index.html#philosophie" class="hover:text-[#767a3f] transition">Wer wir sind</a>
+                <a href="index.html#leistungen" class="hover:text-[#767a3f] transition">Leistungen</a>
+                <a href="index.html#einsatzgebiet" class="hover:text-[#767a3f] transition">Einsatzgebiet</a>
+                <a href="galerie.html" class="hover:text-[#767a3f] transition">📸 Einblicke</a>
+                <a href="index.html#kontakt" class="px-5 py-2.5 bg-[#767a3f] hover:bg-[#5f6332] text-white rounded-xl transition shadow-sm">Lernen wir uns kennen</a>
             </div>
-
-            <!-- Vertretung -->
-            <div>
-                <h2 class="text-xs font-bold text-[#767a3f] uppercase tracking-wider mb-2">Vertreten durch die Gesellschafter</h2>
-                <p class="text-slate-900">Stefanie Timm</p>
-                <p class="text-slate-900">Jannik Hein</p>
-            </div>
-
-            <!-- Kontakt -->
-            <div>
-                <h2 class="text-xs font-bold text-[#767a3f] uppercase tracking-wider mb-2">Kontakt</h2>
-                <p>Telefon: <a href="tel:+4917634231097" class="text-[#767a3f] hover:underline">+49 176 34231097</a></p>
-                <p>E-Mail: <a href="mailto:nordlys.sauberkeit.mit.herz@gmail.com" class="text-[#767a3f] hover:underline">nordlys.sauberkeit.mit.herz@gmail.com</a></p>
-            </div>
-
-            <!-- Inhaltlich Verantwortliche -->
-            <div>
-                <h2 class="text-xs font-bold text-[#767a3f] uppercase tracking-wider mb-2">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
-                <p class="text-slate-900">Stefanie Timm & Jannik Hein</p>
-                <p>Heidesiedlung 46</p>
-                <p>24376 Kappeln</p>
-            </div>
-
-            <!-- Streitschlichtung -->
-            <div class="pt-4 border-t border-slate-100 text-[13px]">
-                <h2 class="text-xs font-bold text-[#767a3f] uppercase tracking-wider mb-2">EU-Streitschlichtung</h2>
-                <p class="mb-2">
-                    Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: 
-                    <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" class="text-[#767a3f] underline break-all">https://ec.europa.eu/consumers/odr/</a>.
-                </p>
-                <p>Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
-                <p class="mt-2 italic text-slate-500">
-                    Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
-                </p>
-            </div>
-
-            <!-- Zurück-Button -->
-            <div class="pt-4 text-center">
-                <a href="index.html" class="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 text-slate-700 rounded-xl font-medium hover:bg-slate-200 transition text-xs shadow-sm">
-                    ← Zurück zur Startseite
-                </a>
-            </div>
-
         </div>
-    </div>
+    </nav>
 
-    <!-- Kleiner Footer -->
-    <footer class="text-center text-[11px] text-slate-400 pb-4">
-        © 2026 Nordlys – Sauberkeit mit Herz
+    <!-- MAIN BLOCK -->
+    <main class="max-w-3xl mx-auto px-4 py-16">
+        <div class="bg-white p-8 sm:p-12 rounded-3xl shadow-xl border border-slate-100 space-y-6">
+            
+            <h1 class="text-3xl font-bold text-slate-900 tracking-tight border-b border-slate-100 pb-4">Impressum</h1>
+            
+            <section class="space-y-3">
+                <h2 class="text-lg font-bold text-slate-900">Angaben gemäß § 5 TMG</h2>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    Nordlys GbR<br>
+                    [Deine Straße / Hausnummer]<br>
+                    [Deine PLZ / Ort]
+                </p>
+            </section>
+
+            <section class="space-y-3">
+                <h2 class="text-lg font-bold text-slate-900">Vertreten durch die geschäftsführenden Gesellschafter</h2>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    Jannik [Dein Nachname] &amp; [Name deiner Schwiegermutter]
+                </p>
+            </section>
+
+            <section class="space-y-3">
+                <h2 class="text-lg font-bold text-slate-900">Kontakt</h2>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    Telefon: +49 176 34231097<br>
+                    E-Mail: nordlys.sauberkeit.mit.herz@gmail.com
+                </p>
+            </section>
+
+            <section class="space-y-3 pt-4 border-t border-slate-100">
+                <h2 class="text-lg font-bold text-slate-900">Umsatzsteuer-ID</h2>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br>
+                    [Deine Umsatzsteuer-ID / oder Angabe: "Folgt nach Zuteilung"]
+                </p>
+            </section>
+
+            <section class="space-y-3 pt-4 border-t border-slate-100">
+                <h2 class="text-lg font-bold text-slate-900">Streitschlichtung</h2>
+                <p class="text-xs text-slate-500 leading-relaxed">
+                    Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank" class="text-[#767a3f] underline">https://ec.europa.eu/consumers/odr</a>.<br>
+                    Unsere E-Mail-Adresse finden Sie oben im Impressum. Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+                </p>
+            </section>
+
+            <div class="pt-6 text-center">
+                <a href="index.html" class="text-xs text-[#767a3f] font-bold hover:underline">← Zurück zur Startseite</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-100 py-8 text-center text-xs text-slate-400 space-y-3">
+        <p>© 2026 Nordlys – Nordische Objektbetreuung & Reinigung</p>
+        <div class="space-x-3">
+            <a href="datenschutz.html" class="hover:text-slate-600 transition underline decoration-dotted">Datenschutzerklärung</a>
+        </div>
     </footer>
 
 </body>
