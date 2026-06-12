@@ -18,6 +18,12 @@
         }
         .leaflet-pane { z-index: 10 !important; }
         .leaflet-top, .leaflet-bottom { z-index: 20 !important; }
+        
+        /* Macht den schwarzen Hintergrund des Schweifs transparent */
+        .blend-schweif {
+            mix-blend-mode: screen;
+            opacity: 0.35; /* Sehr dezent, damit der Text perfekt lesbar bleibt */
+        }
     </style>
 </head>
 <body class="bg-structure font-sans text-slate-800 antialiased">
@@ -58,9 +64,15 @@
         </div>
     </nav>
 
-    <!-- HERO SEKTION -->
+    <!-- HERO SEKTION (Jetzt mit eingebundenem Schweif im Hintergrund) -->
     <header class="relative overflow-hidden bg-white py-20 lg:py-28 border-b border-slate-100">
         <div class="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/canvas-orange.png')]"></div>
+        
+        <!-- NEU: Schweif Nordlys im Hintergrund platziert und per Blend-Mode freigestellt -->
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
+            <img src="Schweif nordlys.jpg" alt="Nordlys Grafik" class="blend-schweif w-full max-w-2xl object-contain transform scale-125 md:scale-100 opacity-20">
+        </div>
+
         <div class="max-w-4xl mx-auto px-4 text-center relative z-10 space-y-6">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#f2f3ea] text-[#767a3f] text-xs font-bold uppercase tracking-wider mx-auto">
                 📍 Aktiv an der Schlei: Kappeln & Schleswig
@@ -148,7 +160,7 @@
                 <h2 class="text-xs font-bold text-[#767a3f] uppercase tracking-wider">Immer in Ihrer Nähe</h2>
                 <h3 class="text-3xl font-bold text-slate-900">Feste Zonen für optimale Erreichbarkeit</h3>
                 <p class="text-sm text-slate-500 leading-relaxed">
-                    Weil wir uns gezielt auf die Regionen rund um <strong class="text-slate-950 font-semibold">Kappeln</strong> und <strong class="text-slate-950 font-semibold">Schleswig</strong> konzentrieren, sind wir für die Reinigung Ihrer Objekte absolut verlässlich planbar. Das bedeutet für Sie: pünktliche Einsätze beim Gästewechsel und klare, unkomplizierte Absprachen.
+                    Weil wir sich gezielt auf die Regionen rund um <strong class="text-slate-950 font-semibold">Kappeln</strong> und <strong class="text-slate-950 font-semibold">Schleswig</strong> konzentrieren, sind wir für die Reinigung Ihrer Objekte absolut verlässlich planbar. Das bedeutet für Sie: pünktliche Einsätze beim Gästewechsel und klare, unkomplizierte Absprachen.
                 </p>
             </div>
 
