@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nordlys – Einblicke & Referenzen | Reinigung</title>
-    <meta name="description" content="Sehen Sie unsere Arbeit: Gründliche Objektpflege und professionelle Reinigung an der Schlei mit dänischer Mentalität.">
+    <title>Nordlys – Impressionen unserer Region | Schlei & Ostsee</title>
+    <meta name="description" content="Eindrücke aus unserer Heimat. Schöne Momente entlang der Schlei von Kappeln bis Schleswig – eingefangen von Nordlys.">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .bg-structure {
@@ -16,7 +16,6 @@
 </head>
 <body class="bg-structure font-sans text-slate-800 antialiased">
 
-    <!-- NAVIGATION -->
     <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-3 group">
@@ -27,7 +26,6 @@
                 </div>
             </a>
             
-            <!-- Desktop Menu -->
             <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
                 <a href="index.html#philosophie" class="hover:text-[#767a3f] transition">Wer wir sind</a>
                 <a href="index.html#leistungen" class="hover:text-[#767a3f] transition">Leistungen</a>
@@ -36,13 +34,11 @@
                 <a href="index.html#kontakt" class="px-5 py-2.5 bg-[#767a3f] hover:bg-[#5f6332] text-white rounded-xl transition shadow-sm">Lernen wir uns kennen</a>
             </div>
 
-            <!-- Mobile Menu Button -->
             <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-slate-600 hover:text-[#767a3f] focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
             </button>
         </div>
 
-        <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-4 space-y-2.5 shadow-md">
             <a href="index.html#philosophie" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">Wer wir sind</a>
             <a href="index.html#leistungen" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">Leistungen</a>
@@ -52,99 +48,105 @@
         </div>
     </nav>
 
-    <!-- HEADER SEKTION -->
-    <header class="bg-white py-16 border-b border-slate-100 text-center">
-        <div class="max-w-3xl mx-auto px-4 space-y-4">
+    <header class="bg-white py-12 border-b border-slate-100 text-center">
+        <div class="max-w-3xl mx-auto px-4 space-y-3">
             <h1 class="text-3xl sm:text-4xl font-light text-slate-900 tracking-tight">
-                Unsere Arbeit in <span class="font-medium text-[#767a3f]">Bildern</span>
+                Einblicke & <span class="font-medium text-[#767a3f]">Wissenswertes</span>
             </h1>
             <p class="text-slate-500 max-w-lg mx-auto text-sm sm:text-base leading-relaxed">
-                Bilder sagen mehr als Worte. Hier zeigen wir dir einen kleinen Auszug unserer täglichen Einsätze – gründlich, professionell und immer mit Blick fürs Detail.
+                Willkommen auf unserer Infoseite. Nachfolgend findest du wichtige Details zu unseren Services, bevor wir dich mit auf eine kleine visuelle Reise durch unsere wunderschöne Heimat nehmen.
             </p>
         </div>
     </header>
 
-    <!-- GALERIE RASTER -->
-    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
+        
+        <div class="bg-white p-6 sm:p-10 rounded-3xl shadow-sm border border-slate-100 space-y-4">
+            <h2 class="text-xl font-bold text-slate-900">Urlaubsträume beginnen bei der Ankunft</h2>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                Unsere Region lebt von ihrer Einzigartigkeit. Damit Eigentümer und Gäste die unberührte Natur, das weite Schleiblau und die historischen Orte in vollen Zügen genießen können, halten wir im Hintergrund die Fäden zusammen. Mit unserem Service sorgen wir für die perfekte Wohlfühlatmosphäre ab der ersten Sekunde.
+            </p>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                Scrollen Sie gerne nach unten, um einen Eindruck von den wunderschönen Ecken zu bekommen, in denen wir Tag für Tag mit Herz und dänischer Gelassenheit für Sie im Einsatz sind.
+            </p>
+        </div>
+
+        <div class="text-center pt-6 space-y-2">
+            <h2 class="text-xs font-bold text-[#767a3f] uppercase tracking-widest italic">Impressionen aus der Heimat</h2>
+            <h3 class="text-2xl font-bold text-slate-900">Wo wir für Sie unterwegs sind</h3>
+        </div>
+
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             
-            <!-- Bild 1 -->
             <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 transition hover:shadow-md">
                 <div class="aspect-video bg-slate-100 relative">
-                    <img src="images/galerie_1.jpg" alt="Ferienobjekt Reinigung" class="w-full h-full object-cover">
+                    <img src="images/region_kappeln.jpg" alt="Hafen Kappeln an der Schlei" class="w-full h-full object-cover">
                 </div>
                 <div class="p-5 space-y-1">
-                    <h3 class="font-bold text-slate-900 text-base">Ferienhaus-Betreuung</h3>
-                    <p class="text-xs text-slate-500">Perfekter Gästewechsel in Olpenitz</p>
+                    <h3 class="font-bold text-slate-900 text-base">Morgentau in Kappeln</h3>
+                    <p class="text-xs text-slate-500">Der idyllische Hafen und das Herzstück unserer Schlei-Region.</p>
                 </div>
             </div>
 
-            <!-- Bild 2 -->
             <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 transition hover:shadow-md">
                 <div class="aspect-video bg-slate-100 relative">
-                    <img src="images/galerie_2.jpg" alt="Streifenfreie Fensterreinigung" class="w-full h-full object-cover">
+                    <img src="images/region_schleimuende.jpg" alt="Lotseninsel Schleimünde" class="w-full h-full object-cover">
                 </div>
                 <div class="p-5 space-y-1">
-                    <h3 class="font-bold text-slate-900 text-base">Fensterreinigung mit Weitblick</h3>
-                    <p class="text-xs text-slate-500">Streifenfreier Durchblick für klare Sicht aufs Wasser</p>
+                    <h3 class="font-bold text-slate-900 text-base">Lotseninsel Schleimünde</h3>
+                    <p class="text-xs text-slate-500">Wo sich das ruhige Schleiwasser sanft mit der offenen Ostsee verbindet.</p>
                 </div>
             </div>
 
-            <!-- Bild 3 -->
             <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 transition hover:shadow-md">
                 <div class="aspect-video bg-slate-100 relative">
-                    <img src="images/galerie_3.jpg" alt="Hausboot Reinigung" class="w-full h-full object-cover">
+                    <img src="images/region_schleswig.jpg" alt="Schleswig Fischerholm" class="w-full h-full object-cover">
                 </div>
                 <div class="p-5 space-y-1">
-                    <h3 class="font-bold text-slate-900 text-base">Exklusive Hausboote</h3>
-                    <p class="text-xs text-slate-500">Erfahrene Pflege auf schwimmenden Urlaubsdomizilen</p>
+                    <h3 class="font-bold text-slate-900 text-base">Kulturstadt Schleswig</h3>
+                    <p class="text-xs text-slate-500">Historischer Charme entlang des Wassers am westlichen Ende der Schlei.</p>
                 </div>
             </div>
 
-            <!-- Bild 4 -->
             <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 transition hover:shadow-md">
                 <div class="aspect-video bg-slate-100 relative">
-                    <img src="images/galerie_4.jpg" alt="Details Ferienwohnung" class="w-full h-full object-cover">
+                    <img src="images/region_ostsee.jpg" alt="Ostsee Strand Schönhagen" class="w-full h-full object-cover">
                 </div>
                 <div class="p-5 space-y-1">
-                    <h3 class="font-bold text-slate-900 text-base">Liebe zum Detail</h3>
-                    <p class="text-xs text-slate-500">Faltenfreie Betten und liebevolle Herrichtung</p>
+                    <h3 class="font-bold text-slate-900 text-base">Weites Ostseeblau</h3>
+                    <p class="text-xs text-slate-500">Sonne, Wind und Naturstrände direkt vor unserer Haustür.</p>
                 </div>
             </div>
 
-            <!-- Bild 5 -->
             <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 transition hover:shadow-md">
                 <div class="aspect-video bg-slate-100 relative">
-                    <img src="images/galerie_5.jpg" alt="Privathaushalt Reinigung" class="w-full h-full object-cover">
+                    <img src="images/region_natur.jpg" alt="Schlei Landschaft im Frühling" class="w-full h-full object-cover">
                 </div>
                 <div class="p-5 space-y-1">
-                    <h3 class="font-bold text-slate-900 text-base">Diskrete Alltagshilfe</h3>
-                    <p class="text-xs text-slate-500">Verlässliche Entlastung im privaten Zuhause</p>
+                    <h3 class="font-bold text-slate-900 text-base">Nordischer Frühling</h3>
+                    <p class="text-xs text-slate-500">Leuchtende Rapsfelder und die typisch sanfte Hügellandschaft der Region.</p>
                 </div>
             </div>
 
-            <!-- Bild 6 -->
             <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 transition hover:shadow-md">
                 <div class="aspect-video bg-slate-100 relative">
-                    <img src="images/galerie_6.jpg" alt="Frische Wäsche" class="w-full h-full object-cover">
+                    <img src="images/region_abendstimmung.jpg" alt="Sonnenuntergang über der Schlei" class="w-full h-full object-cover">
                 </div>
                 <div class="p-5 space-y-1">
-                    <h3 class="font-bold text-slate-900 text-base">Wohlfühlatmosphäre</h3>
-                    <p class="text-xs text-slate-500">Damit sich deine Gäste von Sekunde eins an wohlfühlen</p>
+                    <h3 class="font-bold text-slate-900 text-base">Abendruhe an der Schlei</h3>
+                    <p class="text-xs text-slate-500">Wenn der Tag still wird und skandinavische Gelassenheit einkehrt.</p>
                 </div>
             </div>
 
         </div>
 
-        <!-- ZURÜCK BUTTON -->
-        <div class="text-center pt-12">
+        <div class="text-center pt-8">
             <a href="index.html" class="inline-flex items-center gap-2 px-6 py-3 border border-slate-200 hover:border-[#767a3f] text-slate-600 hover:text-[#767a3f] font-semibold rounded-xl transition bg-white shadow-sm">
                 ← Zurück zur Startseite
             </a>
         </div>
     </main>
 
-    <!-- RECHTLICHER FOOTER -->
     <footer class="bg-white border-t border-slate-100 py-8 text-center text-xs text-slate-400 space-y-3">
         <p>© 2026 Nordlys – Nordische Objektbetreuung & Reinigung</p>
         <div class="space-x-3">
