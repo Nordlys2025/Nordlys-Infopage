@@ -18,24 +18,6 @@
         }
         .leaflet-pane { z-index: 10 !important; }
         .leaflet-top, .leaflet-bottom { z-index: 20 !important; }
-        
-        /* Neuer, stabilerer Hintergrund-Container für den Schweif */
-        .hero-schweif-bg {
-            position: relative;
-        }
-        .hero-schweif-bg::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-image: url('Schweif nordlys.png');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
-            mix-blend-mode: screen;
-            opacity: 0.18; /* Etwas dezenter, damit es im Hintergrund mitschwingt */
-            pointer-events: none;
-            z-index: 1;
-        }
     </style>
 </head>
 <body class="bg-structure font-sans text-slate-800 antialiased">
@@ -72,14 +54,21 @@
             <a href="#leistungen" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">Leistungen</a>
             <a href="#einsatzgebiet" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">Einsatzgebiet</a>
             <a href="galerie.html" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">📸 Einblicke</a>
-            <a href="#kontakt" onclick="toggleMobileMenu()" class="block text-center px-3 py-3 bg-[#767a3f] text-white font-bold rounded-xl shadow-sm">Lernen wir uns kennen</a>
+            <a href="#kontakt" onclick="toggleMobileMenu()" class="block text-center px-3 py-3 bg-[#767a3f] text-white font-bold rounded-xl shadow-sm">Jetzt anfragen</a>
         </div>
     </nav>
 
-    <!-- HERO SEKTION -->
-    <header class="hero-schweif-bg relative overflow-hidden bg-white py-20 lg:py-28 border-b border-slate-100">
+    <!-- HERO SEKTION (Mit unfehlbarer HTML-Bild-Einbindung für den Schweif) -->
+    <header class="relative overflow-hidden bg-white py-20 lg:py-28 border-b border-slate-100">
         <div class="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/canvas-orange.png')]"></div>
         
+        <!-- Der Hintergrund-Schweif: Absolut ausfallsicher per HTML-Tag platziert -->
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
+            <img src="Schweif nordlys.png" 
+                 alt="Nordlys Schweif Grafik" 
+                 class="w-full max-w-2xl object-contain mix-blend-screen opacity-25 filter brightness-125 contrast-100 transform scale-125 md:scale-100">
+        </div>
+
         <div class="max-w-4xl mx-auto px-4 text-center relative z-10 space-y-6">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#f2f3ea] text-[#767a3f] text-xs font-bold uppercase tracking-wider mx-auto">
                 📍 Aktiv an der Schlei: Kappeln & Schleswig
