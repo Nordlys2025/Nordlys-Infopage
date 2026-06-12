@@ -58,17 +58,10 @@
         </div>
     </nav>
 
-    <!-- HERO SEKTION (Schweif wieder in sanfter, originaler Helligkeit) -->
+    <!-- HERO SEKTION (Wieder komplett weiß und perfekt lesbar) -->
     <header class="relative overflow-hidden bg-white py-20 lg:py-28 border-b border-slate-100">
         <div class="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/canvas-orange.png')]"></div>
         
-        <!-- Der Hintergrund-Schweif: Große Skalierung, aber mit den sanften Originalfarben ohne Überbelichtung -->
-        <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0 overflow-hidden">
-            <img src="Schweif nordlys.png" 
-                 alt="Nordlys Schweif Grafik" 
-                 class="w-full max-w-xl md:max-w-5xl h-auto object-contain mix-blend-screen opacity-20 transform scale-150 md:scale-110 -translate-y-10 md:-translate-y-16">
-        </div>
-
         <div class="max-w-4xl mx-auto px-4 text-center relative z-10 space-y-6">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#f2f3ea] text-[#767a3f] text-xs font-bold uppercase tracking-wider mx-auto">
                 📍 Aktiv an der Schlei: Kappeln & Schleswig
@@ -204,8 +197,15 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-white border-t border-slate-100 py-8 text-center text-xs text-slate-400 space-y-3">
+    <!-- NEUER EDIT: DER NORDLYS SCHWEIF ALS EDLER FINALE-ELEMENT IM FOOTER -->
+    <div class="w-full flex items-center justify-center pointer-events-none select-none overflow-hidden max-w-md mx-auto h-24 -mb-4">
+        <img src="Schweif nordlys.png" 
+             alt="Nordlys Schweif Deko" 
+             class="w-full h-full object-contain mix-blend-screen opacity-20 transform scale-110">
+    </div>
+
+    <!-- RECHTLICHER FOOTER -->
+    <footer class="bg-white border-t border-slate-100 py-8 text-center text-xs text-slate-400 space-y-3 relative z-10">
         <p>© 2026 Nordlys – Nordische Objektbetreuung & Reinigung</p>
         <div class="space-x-3">
             <a href="impressum.html" class="hover:text-slate-600 transition underline decoration-dotted">Impressum</a>
