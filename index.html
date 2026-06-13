@@ -7,7 +7,6 @@
     <meta name="description" content="Ihr persönlicher Partner für Reinigung in der Schlei-Region. Dänische Mentalität, gründlich und von Herzen – für Ferienobjekte & Privathaushalte.">
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Leaflet CSS für die interaktive Karte -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     
     <style>
@@ -22,7 +21,6 @@
 </head>
 <body class="bg-structure font-sans text-slate-800 antialiased">
 
-    <!-- NAVIGATION -->
     <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="#" class="flex items-center gap-3 group">
@@ -33,7 +31,6 @@
                 </div>
             </a>
             
-            <!-- Desktop Menu -->
             <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
                 <a href="#philosophie" class="hover:text-[#767a3f] transition">Wer wir sind</a>
                 <a href="#leistungen" class="hover:text-[#767a3f] transition">Leistungen</a>
@@ -42,13 +39,11 @@
                 <a href="#kontakt" class="px-5 py-2.5 bg-[#767a3f] hover:bg-[#5f6332] text-white rounded-xl transition shadow-sm">Lernen wir uns kennen</a>
             </div>
 
-            <!-- Mobile Menu Button -->
             <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-slate-600 hover:text-[#767a3f] focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
             </button>
         </div>
 
-        <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-4 space-y-2.5 shadow-md">
             <a href="#philosophie" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">Wer wir sind</a>
             <a href="#leistungen" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">Leistungen</a>
@@ -58,7 +53,6 @@
         </div>
     </nav>
 
-    <!-- HERO SEKTION -->
     <header class="relative overflow-hidden bg-white py-20 lg:py-28 border-b border-slate-100">
         <div class="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/canvas-orange.png')]"></div>
         
@@ -73,196 +67,4 @@
             <p class="text-base sm:text-lg text-slate-500 max-w-xl mx-auto leading-relaxed">
                 Wir sind kein anonymes Großunternehmen. Als familiäres Team bringen wir die skandinavische Gelassenheit, Ehrlichkeit und den Blick fürs Detail direkt in Ihr Objekt.
             </p>
-            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-sm mx-auto">
-                <a href="#kontakt" class="w-full sm:w-auto px-8 py-4 bg-[#767a3f] hover:bg-[#5f6332] text-white font-bold rounded-2xl transition shadow-lg text-center active:scale-95">
-                    ✉ Hallo sagen & anfragen
-                </a>
-                <a href="galerie.html" class="w-full sm:w-auto px-8 py-4 border-2 border-[#767a3f] text-[#767a3f] font-bold rounded-2xl hover:bg-[#767a3f] hover:text-white transition text-center">
-                    Unsere Arbeit sehen
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <!-- PHILOSOPHIE / ÜBER UNS -->
-    <section id="philosophie" class="py-20 max-w-4xl mx-auto px-4 text-center scroll-mt-20">
-        <div class="space-y-4">
-            <h2 class="text-xs font-bold text-[#767a3f] uppercase tracking-widest italic">Das sind wir</h2>
-            <h3 class="text-2xl sm:text-3xl font-bold text-slate-900">Ehrlich, gründlich und einfach persönlich.</h3>
-            <p class="text-slate-600 text-[16px] sm:text-lg leading-relaxed max-w-2xl mx-auto pt-2">
-                Durch unsere Schulzeit dänisch geprägt, liegt uns das Skandinavische einfach im Blut: Wir stehen für ein unkompliziertes, ehrliches Miteinander auf Augenhöhe, absolute Verlässlichkeit und gehen unsere Arbeit Tag für Tag mit einer positiven Lebenseinstellung und stets einem Lächeln auf den Lippen an. Bei uns gibt es keine anonyme Massenabfertigung. Unser Ziel ist es, dass Ihre Gäste eine rundum saubere, einladende Umgebung vorfinden – oder wie man in Dänemark sagt: einfach rundum *hyggelig*.
-            </p>
-        </div>
-    </section>
-
-    <!-- LEISTUNGEN -->
-    <section id="leistungen" class="py-20 bg-white border-y border-slate-100 scroll-mt-20">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-xl mx-auto mb-16 space-y-2">
-                <h2 class="text-xs font-bold text-[#767a3f] uppercase tracking-wider">Hände, die anpacken</h2>
-                <h3 class="text-3xl font-bold text-slate-900">Wie wir Ihnen helfen können</h3>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                <!-- Leistung 1 -->
-                <div class="p-6 sm:p-8 bg-slate-50/50 rounded-2xl border border-slate-100 space-y-3 transition hover:shadow-md">
-                    <div class="text-2xl">🏡</div>
-                    <h4 class="text-lg font-bold text-slate-900">Ferienwohnungen & -häuser</h4>
-                    <p class="text-sm text-slate-600 leading-relaxed">Ein herzliches Willkommen für Ihre Gäste. Wir sorgen für einen absolut reibungslosen Gästewechsel, beziehen die Betten faltenfrei und hinterlassen liebevolle Details wie das hergerichtete Handtuch, das sofort Urlaubsstimmung bringt.</p>
-                </div>
-
-                <!-- Leistung 2 -->
-                <div class="p-6 sm:p-8 bg-slate-50/50 rounded-2xl border border-slate-100 space-y-3 transition hover:shadow-md">
-                    <div class="text-2xl">⚓</div>
-                    <h4 class="text-lg font-bold text-slate-900">Agenturen & Verwalter</h4>
-                    <p class="text-sm text-slate-600 leading-relaxed">Ein Partner, auf den Verlass ist. Wir übernehmen die gründliche Reinigung größerer Wohneinheiten und besonderer Objekte wie Hausboot-Flotten an der Schlei. Pünktlich, unkompliziert und auf Augenhöhe.</p>
-                </div>
-
-                <!-- Leistung 3 -->
-                <div class="p-6 sm:p-8 bg-slate-50/50 rounded-2xl border border-slate-100 space-y-3 transition hover:shadow-md">
-                    <div class="text-2xl">✨</div>
-                    <h4 class="text-lg font-bold text-slate-900">Fensterreinigung mit Weitblick</h4>
-                    <p class="text-sm text-slate-600 leading-relaxed">Für uns gehört der freie Blick einfach dazu. Die streifenfreie Reinigung der Fenster ist bei uns fester Bestandteil der Objektpflege – damit Ihre Gäste die wunderschöne Aussicht aufs Wasser voll genießen können.</p>
-                </div>
-
-                <!-- Leistung 4 -->
-                <div class="p-6 sm:p-8 bg-slate-50/50 rounded-2xl border border-slate-100 space-y-3 transition hover:shadow-md">
-                    <div class="text-2xl">🔑</div>
-                    <h4 class="text-lg font-bold text-slate-900">Entlastung im Privathaushalt</h4>
-                    <p class="text-sm text-slate-600 leading-relaxed">Diskrete Hilfe im Alltag. Wir unterstützen Sie in Ihrem Zuhause genau so, wie es am besten in Ihren Lebensrhythmus passt. Herzlich, vertrauensvoll and absolut gründlich.</p>
-                </div>
-            </div>
-
-            <!-- Individuelle Gestaltung -->
-            <div class="mt-12 p-5 bg-[#f2f3ea]/50 rounded-2xl border border-[#d1d2c7]/30 text-center max-w-2xl mx-auto">
-                <p class="text-sm text-slate-700 leading-relaxed font-medium">
-                    ✨ **Weil jedes Objekt und jeder Mensch anders ist:** Wir pressen Sie in kein starres Schema. Sowohl der Ablauf als auch die Preise werden ganz flexibel und **mit dänischer Herzlichkeit persönlich mit Ihnen abgesprochen**.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEKTION EINSATZGEBIET -->
-    <section id="einsatzgebiet" class="py-20 scroll-mt-20">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-xl mx-auto mb-12 space-y-2">
-                <h2 class="text-xs font-bold text-[#767a3f] uppercase tracking-wider">Immer in Ihrer Nähe</h2>
-                <h3 class="text-3xl font-bold text-slate-900">Feste Zonen für optimale Erreichbarkeit</h3>
-                <p class="text-sm text-slate-500 leading-relaxed">
-                    Weil wir uns gezielt auf die Regionen rund um <strong class="text-slate-950 font-semibold">Kappeln</strong> und <strong class="text-slate-950 font-semibold">Schleswig</strong> konzentrieren, sind wir für die Reinigung Ihrer Objekte absolut verlässlich planbar. Das bedeutet für Sie: pünktliche Einsätze beim Gästewechsel und klare, unkomplizierte Absprachen.
-                </p>
-            </div>
-
-            <div class="bg-white p-4 sm:p-6 rounded-3xl shadow-xl border border-slate-100 max-w-4xl mx-auto">
-                <!-- Das Kartenfenster -->
-                <div id="map" class="w-full h-80 sm:h-[450px] rounded-2xl overflow-hidden shadow-inner bg-slate-100"></div>
-                
-                <!-- Legende -->
-                <div class="mt-4 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-500 font-medium pt-2">
-                    <div class="flex items-center gap-1.5">
-                        <span class="w-3 h-3 rounded-full bg-[#767a3f]/10 border border-[#767a3f] border-dashed"></span>
-                        <span>Unsere festen Service-Zonen für die Objektpflege</span>
-                    </div>
-                    <div class="flex items-center gap-1.5">
-                        <span class="w-2.5 h-3.5 bg-[url('https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png')] bg-contain bg-no-repeat inline-block"></span>
-                        <span>Einsatzorte & Haupt-Objekte</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- KONTAKT BEREICH -->
-    <section id="kontakt" class="py-20 max-w-md mx-auto px-4 text-center scroll-mt-20">
-        <div class="space-y-6">
-            <div class="space-y-2">
-                <h2 class="text-xs font-bold text-[#767a3f] uppercase tracking-wider">Einfach melden</h2>
-                <h3 class="text-3xl font-bold text-slate-900">Lassen Sie uns schnacken</h3>
-                <p class="text-sm text-slate-500">Ganz unverbindlich – wir freuen uns auf Sie und Ihr Objekt!</p>
-            </div>
-
-            <div class="space-y-3 pt-4">
-                <a href="mailto:nordlys.sauberkeit.mit.herz@gmail.com" 
-                   class="flex items-center justify-center gap-3 w-full py-4 bg-[#767a3f] text-white rounded-2xl font-bold hover:bg-[#5f6332] transition shadow-lg active:scale-95 group text-base">
-                    <svg class="w-5 h-5 fill-current transition-transform group-hover:scale-110" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                    E-Mail schreiben
-                </a>
-                
-                <a href="tel:+4917634231097" 
-                   class="flex items-center justify-center gap-3 w-full py-4 border-2 border-[#767a3f] text-[#767a3f] rounded-2xl font-bold hover:bg-[#767a3f] hover:text-white transition text-base group">
-                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                    Einfach anrufen
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- RECHTLICHER FOOTER -->
-    <footer class="bg-white border-t border-slate-100 py-8 text-center text-xs text-slate-400 space-y-3 relative z-10">
-        <p>© 2026 Nordlys – Nordische Objektbetreuung & Reinigung</p>
-        <div class="space-x-3">
-            <a href="impressum.html" class="hover:text-slate-600 transition underline decoration-dotted">Impressum</a>
-            <span>•</span>
-            <a href="datenschutz.html" class="hover:text-slate-600 transition underline decoration-dotted">Datenschutz</a>
-        </div>
-    </footer>
-
-    <!-- Leaflet JS für Kartenfunktionalität -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-
-    <!-- KARTEN-SKRIPT MIT ROTEN STECKNADELN -->
-    <script>
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        }
-
-        const map = L.map('map', {
-            scrollWheelZoom: false 
-        }).setView([54.590, 9.770], 11); 
-
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-            attribution: '© OpenStreetMap contributors © CARTO'
-        }).addTo(map);
-
-        // SERVICE-ZONEN STYLE (Dezente, gestrichelte Ringe)
-        const zoneStyle = {
-            color: '#767a3f',         
-            dashArray: '5, 8',     
-            weight: 2,              
-            fillColor: '#767a3f',     
-            fillOpacity: 0.07        
-        };
-
-        // KREIS 1: Kernbereich Kappeln (8-km-Radius)
-        L.circle([54.640, 9.915], zoneStyle).addTo(map);
-
-        // KREIS 2: Bereich Schleswig (5-km-Radius)
-        L.circle([54.5152, 9.5606], zoneStyle).addTo(map);
-
-        // DEFINITION DER ROTEN STECKNADELN (Inklusive realistischem Schatten)
-        const redIcon = new L.Icon({
-            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
-            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-            iconSize: [25, 41],
-            iconAnchor: [12, 41],
-            popupAnchor: [1, -34],
-            shadowSize: [41, 41]
-        });
-
-        // Eure Standorte und Einsatzorte
-        const locations = [
-            { coords: [54.6614, 9.9329], title: "<b>Kappeln</b><br>Unser Haupt-Stützpunkt" },
-            { coords: [54.6202, 9.8856], title: "<b>Brodersby / Schönhagen</b><br>Ferienobjekte & Privathaushalte" },
-            { coords: [54.6685, 9.9670], title: "<b>Olpenitz (OstseeResort)</b><br>Hausboot-Betreuung & Gästewechsel" },
-            { coords: [54.5152, 9.5606], title: "<b>Schleswig</b><br>Ganzheitliche Objektpflege & Betreuung" }
-        ];
-
-        // Orte als rote Stecknadeln auf der Karte platzieren
-        locations.forEach(function(loc) {
-            L.marker(loc.coords, { icon: redIcon }).addTo(map).bindPopup(loc.title);
-        });
-    </script>
-
-</body>
-</html>
+            <div class="pt-4 flex flex-col sm:
