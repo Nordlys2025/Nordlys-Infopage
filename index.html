@@ -14,6 +14,7 @@
 </head>
 <body class="bg-structure font-sans text-slate-800 antialiased">
 
+    <!-- NAVIGATION -->
     <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="#" class="flex items-center gap-3 group">
@@ -26,6 +27,7 @@
             <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
                 <a href="#philosophie" class="hover:text-[#767a3f] transition">Wer wir sind</a>
                 <a href="#leistungen" class="hover:text-[#767a3f] transition">Leistungen</a>
+                <a href="#preise" class="hover:text-[#767a3f] transition">Preise</a>
                 <a href="#einsatzgebiet" class="hover:text-[#767a3f] transition">Einsatzgebiet</a>
                 <a href="galerie.html" class="hover:text-[#767a3f] transition flex items-center gap-1">📸 Einblicke</a>
                 <a href="#kontakt" class="px-5 py-2.5 bg-[#767a3f] hover:bg-[#5f6332] text-white rounded-xl transition shadow-sm">Lernen wir uns kennen</a>
@@ -37,12 +39,14 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-4 space-y-2.5 shadow-md">
             <a href="#philosophie" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">Wer wir sind</a>
             <a href="#leistungen" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">Leistungen</a>
+            <a href="#preise" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">Preise</a>
             <a href="#einsatzgebiet" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">Einsatzgebiet</a>
             <a href="galerie.html" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">📸 Einblicke</a>
             <a href="#kontakt" onclick="toggleMobileMenu()" class="block text-center px-3 py-3 bg-[#767a3f] text-white font-bold rounded-xl shadow-sm">Jetzt anfragen</a>
         </div>
     </nav>
 
+    <!-- HERO SEKTION -->
     <header class="relative overflow-hidden bg-white py-20 lg:py-28 border-b border-slate-100">
         <div class="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/canvas-orange.png')]"></div>
         <div class="max-w-4xl mx-auto px-4 text-center relative z-10 space-y-6">
@@ -63,21 +67,23 @@
         </div>
     </header>
 
+    <!-- PHILOSOPHIE -->
     <section id="philosophie" class="py-20 max-w-4xl mx-auto px-4 text-center scroll-mt-20">
         <div class="space-y-4">
             <h2 class="text-xs font-bold text-[#767a3f] uppercase tracking-widest italic">Das sind wir</h2>
             <h3 class="text-2xl sm:text-3xl font-bold text-slate-900">Ehrlich, gründlich und einfach persönlich.</h3>
-            <p class="text-slate-600 text-[16px] sm:text-lg leading-relaxed max-w-2xl mx-auto pt-2">Durch unsere Schulzeit dänisch geprägt, liegt uns das Skandinavische einfach im Blut: Wir stehen für ein unkompliziertes, ehrliches Miteinander auf Augenhöhe, absolute Verlässlichkeit und gehen unsere Arbeit Tag für Tag mit einer positiven Lebenseinstellung und stets einem Lächeln auf den Lippen an. Bei uns gibt es keine anonyme Massenabfertigung. Unser Ziel ist es, dass Ihre Gäste eine rundum saubere, einladende Umgebung vorfinden – oder wie man in Dänemark sagt: einfach rundum *hyggelig*.</p>
+            <p class="text-slate-600 text-[16px] sm:text-lg leading-relaxed max-w-2xl mx-auto pt-2">Durch unsere Schulzeit dänisch geprägt, liegt uns das Skandinavische einfach im Blut: Wir stehen für ein unkompliziertes, ehrliches Miteinander auf Augenhöhe, absolute Verlässlichkeit und gehen unsere Arbeit Tag für Tag mit einer positiv Lebenseinstellung und stets einem Lächeln auf den Lippen an. Bei uns gibt es keine anonyme Massenabfertigung. Unser Ziel ist es, dass Ihre Gäste eine rundum saubere, einladende Umgebung vorfinden – oder wie man in Dänemark sagt: einfach rundum *hyggelig*.</p>
         </div>
     </section>
 
+    <!-- LEISTUNGEN -->
     <section id="leistungen" class="py-20 bg-white border-y border-slate-100 scroll-mt-20">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-xl mx-auto mb-16 space-y-2"><h2 class="text-xs font-bold text-[#767a3f] uppercase tracking-wider">Hände, die anpacken</h2><h3 class="text-3xl font-bold text-slate-900">Wie wir Ihnen helfen können</h3></div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                 <div class="p-6 sm:p-8 bg-slate-50/50 rounded-2xl border border-slate-100 space-y-3 transition hover:shadow-md">
                     <div class="text-2xl">🏡</div><h4 class="text-lg font-bold text-slate-900">Ferienwohnungen & -häuser</h4>
-                    <p class="text-sm text-slate-600 leading-relaxed">Ein herzliches Willkommen für Ihre Gäste. We sorgen für einen absolut reibungslosen Gästewechsel, beziehen die Betten faltenfrei und hinterlassen liebevolle Details wie das hergerichtete Handtuch, das sofort Urlaubsstimmung bringt.</p>
+                    <p class="text-sm text-slate-600 leading-relaxed">Ein herzliches Willkommen für Ihre Gäste. Wir sorgen für einen absolut reibungslosen Gästewechsel, beziehen die Betten faltenfrei und hinterlassen liebevolle Details wie das hergerichtete Handtuch, das sofort Urlaubsstimmung bringt.</p>
                 </div>
                 <div class="p-6 sm:p-8 bg-slate-50/50 rounded-2xl border border-slate-100 space-y-3 transition hover:shadow-md">
                     <div class="text-2xl">⚓</div><h4 class="text-lg font-bold text-slate-900">Agenturen & Verwalter</h4>
@@ -101,14 +107,74 @@
         </div>
     </section>
 
-    <section id="einsatzgebiet" class="py-20 scroll-mt-20">
+    <!-- NEU: SEKTION PREISE -->
+    <section id="preise" class="py-20 scroll-mt-20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-xl mx-auto mb-12 space-y-2">
+                <h2 class="text-xs font-bold text-[#767a3f] uppercase tracking-wider">Klar & Transparent</h2>
+                <h3 class="text-3xl font-bold text-slate-900">Unsere festen Tarife</h3>
+                <p class="text-sm text-slate-500 leading-relaxed">Für maximale Planbarkeit haben wir für ausgewählte Basis- und Zusatzleistungen feste Verrechnungssätze festgelegt.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-4xl mx-auto">
+                
+                <!-- Tarif 1: Fensterreinigung -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="text-xl mb-1">✨</div>
+                        <h4 class="text-base font-bold text-slate-900">Fensterreinigung</h4>
+                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">Streifenfreier Blick für Ferienobjekte und private Haushalte. Inklusive Rahmen- und Glasreinigung.</p>
+                    </div>
+                    <div class="border-t border-slate-100 pt-3">
+                        <div class="text-xs text-slate-400 font-medium">Stundensatz</div>
+                        <div class="text-2xl font-bold text-[#767a3f] mt-0.5">39,00 € <span class="text-xs font-normal text-slate-500">/ Std.</span></div>
+                    </div>
+                </div>
+
+                <!-- Tarif 2: Zusatzleistungen Wäsche -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="text-xl mb-1">🛏️</div>
+                        <h4 class="text-base font-bold text-slate-900">Wäscheservice & Co.</h4>
+                        <p class="text-xs text-slate-500 mt-1 leading-relaxed">Faltenfrei hergerichtete Betten und frische Handtücher für den optimalen, reibungslosen Gästewechsel.</p>
+                    </div>
+                    <div class="border-t border-slate-100 pt-3">
+                        <div class="text-xs text-slate-400 font-medium">Wäschepaket pro Gast</div>
+                        <div class="text-2xl font-bold text-[#767a3f] mt-0.5">18,50 €</div>
+                    </div>
+                </div>
+
+                <!-- Tarif 3: Pflegeentlastung -->
+                <div class="bg-white p-6 rounded-2xl border border-[#767a3f]/20 bg-[#fdfdfb] shadow-sm flex flex-col justify-between space-y-4 border-t-4 border-t-[#767a3f]">
+                    <div>
+                        <div class="text-xl mb-1">🔑</div>
+                        <h4 class="text-base font-bold text-slate-900">Entlastungsbetrag</h4>
+                        <p class="text-xs text-slate-700 mt-1 leading-relaxed font-medium">Hauswirtschaftliche Betreuung nach § 45b SGB XI. Direktabrechnung mit allen Pflegekassen möglich.</p>
+                    </div>
+                    <div class="border-t border-slate-100 pt-3">
+                        <div class="text-xs text-slate-500 font-semibold text-[#767a3f]">Abrechnungssatz (Krankenkasse)</div>
+                        <div class="text-2xl font-bold text-[#767a3f] mt-0.5">42,00 € <span class="text-xs font-normal text-slate-500">/ Std.</span></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Preishinweis -->
+            <div class="mt-8 text-center text-[11px] text-slate-400 max-w-md mx-auto">
+                * Alle Preise verstehen sich als Richtwerte zzgl. einer fairen Anfahrtspauschale je nach Zone. Individuelle Angebote für Ferienhaus-Dauerbetreuungen erstellen wir maßgeschneidert auf Anfrage.
+            </div>
+        </div>
+    </section>
+
+    <!-- EINSATZGEBIET -->
+    <section id="einsatzgebiet" class="py-20 scroll-mt-20 bg-white border-t border-slate-100">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-xl mx-auto mb-12 space-y-2">
                 <h2 class="text-xs font-bold text-[#767a3f] uppercase tracking-wider">Immer in Ihrer Nähe</h2>
                 <h3 class="text-3xl font-bold text-slate-900">Unsere Einsatzorte in der Region</h3>
                 <p class="text-sm text-slate-500 leading-relaxed">Weil wir uns gezielt auf die Regionen rund um <strong>Kappeln</strong> und <strong>Schleswig</strong> konzentrieren, sind wir verlässlich planbar.</p>
             </div>
-            <div class="bg-white p-4 sm:p-6 rounded-3xl shadow-xl border border-slate-100 max-w-4xl mx-auto">
+            <div class="bg-structure p-4 sm:p-6 rounded-3xl shadow-xl border border-slate-100 max-w-4xl mx-auto">
                 <div id="map" class="w-full h-80 sm:h-[450px] rounded-2xl overflow-hidden shadow-inner bg-slate-100"></div>
                 <div class="mt-4 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-500 font-medium pt-2">
                     <div class="flex items-center gap-1.5"><span class="w-2.5 h-3.5 bg-[url('https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png')] bg-contain bg-no-repeat inline-block"></span><span>Einsatzorte & Haupt-Objekte</span></div>
@@ -117,6 +183,7 @@
         </div>
     </section>
 
+    <!-- KONTAKT -->
     <section id="kontakt" class="py-20 max-w-md mx-auto px-4 text-center scroll-mt-20">
         <div class="space-y-6">
             <div class="space-y-2">
@@ -135,11 +202,13 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="bg-white border-t border-slate-100 py-8 text-center text-xs text-slate-400 space-y-3 relative z-10">
         <p>© 2026 Nordlys – Nordische Objektbetreuung & Reinigung</p>
         <div class="space-x-3"><a href="impressum.html" class="hover:text-slate-600 transition underline">Impressum</a><span>•</span><a href="datenschutz.html" class="hover:text-slate-600 transition underline">Datenschutz</a></div>
     </footer>
 
+    <!-- LEAFLET SKRIPTE -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script>
         function toggleMobileMenu() { document.getElementById('mobile-menu').classList.toggle('hidden'); }
