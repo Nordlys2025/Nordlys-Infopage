@@ -12,10 +12,18 @@
             background-image: radial-gradient(#d1d2c7 0.8px, transparent 0.8px);
             background-size: 16px 16px;
         }
+        /* Verhindert das Springen der Slider-Bilder */
+        .slider-image {
+            display: none;
+        }
+        .slider-image.active {
+            display: block;
+        }
     </style>
 </head>
 <body class="bg-structure font-sans text-slate-800 antialiased">
 
+    <!-- NAVIGATION -->
     <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-3 group">
@@ -48,74 +56,80 @@
         </div>
     </nav>
 
+    <!-- HEADER SEKTION MIT DÄNISCHER FLAGGE -->
     <header class="bg-white py-12 border-b border-slate-100 text-center space-y-3">
-        <span class="text-xs font-bold text-[#767a3f] uppercase tracking-widest">Echte Eindrücke</span>
+        <div class="flex items-center justify-center gap-2">
+            <span class="text-xs font-bold text-[#767a3f] uppercase tracking-widest">Echte Eindrücke</span>
+            <!-- Kleine, feine dänische Flagge als SVG -->
+            <svg class="w-4 h-3 rounded-sm shadow-sm inline-block -mt-0.5" viewBox="0 0 37 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="37" height="28" fill="#C8102E"/>
+                <path d="M12 0V28M0 12H37" stroke="white" stroke-width="4"/>
+            </svg>
+        </div>
         <h1 class="text-3xl sm:text-4xl font-light text-slate-900 tracking-tight">
             Unsere Arbeit & <span class="font-medium text-[#767a3f]">unsere Heimat</span>
         </h1>
         <p class="text-sm text-slate-500 max-w-md mx-auto leading-relaxed px-4">
-            Hier zeigen wir Ihnen, wie wir den skandinavischen Wohlfühlfaktor in Ihre Räume bringen und in welcher wunderschönen Region wir täglich für Sie unterwegs sind.
+            Klicken Sie auf die Pfeile in den Kästchen, um mehrere Bilder zu sehen. Ein Klick auf das Foto vergrößert es für eine Detailansicht.
         </p>
     </header>
 
     <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20">
 
+        <!-- SEKTION 1: REINIGUNGEN MIT MULTI-BILDER-SLIDERN -->
         <section class="space-y-6">
             <div class="flex items-center gap-3 border-b border-[#d1d2c7]/30 pb-3">
                 <span class="text-2xl">✨</span>
                 <div>
                     <h2 class="text-xl font-bold text-slate-900">Fotos von unseren Reinigungen</h2>
-                    <p class="text-xs text-slate-500">Frisch hergerichtet, makellos sauber und einladend für den nächsten Gast.</p>
+                    <p class="text-xs text-slate-500">Nutzen Sie die Pfeile (&lt; &gt;), um durch die Bilderserien zu blättern.</p>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 
-                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100 space-y-2 group">
+                <!-- KÄSTCHEN 1: KÜCHEN-SERIE -->
+                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100 space-y-2 relative group flex flex-col justify-between">
                     <div class="aspect-[4/3] rounded-xl overflow-hidden bg-slate-100 relative">
-                        <img src="images/reinigung-1.jpg" alt="Nordlys Reinigungsservice" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <img src="images/kueche-1.jpg" alt="Küchenreinigung Detail 1" class="slider-image active w-full h-full object-cover cursor-pointer hover:scale-105 transition duration-500" onclick="openLightbox(this)">
+                        <img src="images/kueche-2.jpg" alt="Küchenreinigung Detail 2" class="slider-image w-full h-full object-cover cursor-pointer hover:scale-105 transition duration-500" onclick="openLightbox(this)">
+                        <img src="images/kueche-3.jpg" alt="Küchenreinigung Detail 3" class="slider-image w-full h-full object-cover cursor-pointer hover:scale-105 transition duration-500" onclick="openLightbox(this)">
+                        
+                        <button onclick="changeSlide(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-2 rounded-full shadow z-10 text-xs font-bold transition select-none">&lt;</button>
+                        <button onclick="changeSlide(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-2 rounded-full shadow z-10 text-xs font-bold transition select-none">&gt;</button>
                     </div>
-                    <p class="text-xs font-semibold text-slate-700 px-1">Frische, faltenfreie Bettengestaltung</p>
+                    <p class="text-xs font-semibold text-slate-700 px-1 pt-1">Hygienische Küchenreinigung & Details</p>
                 </div>
 
-                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100 space-y-2 group">
+                <!-- KÄSTCHEN 2: BADEZIMMER-SERIE -->
+                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100 space-y-2 relative group flex flex-col justify-between">
                     <div class="aspect-[4/3] rounded-xl overflow-hidden bg-slate-100 relative">
-                        <img src="images/reinigung-2.jpg" alt="Nordlys Reinigungsservice" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <img src="images/bad-1.jpg" alt="Badezimmerreinigung 1" class="slider-image active w-full h-full object-cover cursor-pointer hover:scale-105 transition duration-500" onclick="openLightbox(this)">
+                        <img src="images/bad-2.jpg" alt="Badezimmerreinigung 2" class="slider-image w-full h-full object-cover cursor-pointer hover:scale-105 transition duration-500" onclick="openLightbox(this)">
+                        <img src="images/bad-3.jpg" alt="Badezimmerreinigung 3" class="slider-image w-full h-full object-cover cursor-pointer hover:scale-105 transition duration-500" onclick="openLightbox(this)">
+                        
+                        <button onclick="changeSlide(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-2 rounded-full shadow z-10 text-xs font-bold transition select-none">&lt;</button>
+                        <button onclick="changeSlide(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-2 rounded-full shadow z-10 text-xs font-bold transition select-none">&gt;</button>
                     </div>
-                    <p class="text-xs font-semibold text-slate-700 px-1">Liebevolle Details im Badezimmer</p>
+                    <p class="text-xs font-semibold text-slate-700 px-1 pt-1">Glänzende Armaturen & Badpflege</p>
                 </div>
 
-                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100 space-y-2 group">
+                <!-- KÄSTCHEN 3: WOHNZIMMER / BETTEN -->
+                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100 space-y-2 relative group flex flex-col justify-between">
                     <div class="aspect-[4/3] rounded-xl overflow-hidden bg-slate-100 relative">
-                        <img src="images/reinigung-3.jpg" alt="Nordlys Reinigungsservice" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <img src="images/wohnen-1.jpg" alt="Wohnbereich hergerichtet" class="slider-image active w-full h-full object-cover cursor-pointer hover:scale-105 transition duration-500" onclick="openLightbox(this)">
+                        <img src="images/wohnen-2.jpg" alt="Betten frisch bezogen" class="slider-image w-full h-full object-cover cursor-pointer hover:scale-105 transition duration-500" onclick="openLightbox(this)">
+                        
+                        <button onclick="changeSlide(this, -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-2 rounded-full shadow z-10 text-xs font-bold transition select-none">&lt;</button>
+                        <button onclick="changeSlide(this, 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-2 rounded-full shadow z-10 text-xs font-bold transition select-none">&gt;</button>
                     </div>
-                    <p class="text-xs font-semibold text-slate-700 px-1">Streifenfreie Glas- & Fensterflächen</p>
-                </div>
-
-                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100 space-y-2 group">
-                    <div class="aspect-[4/3] rounded-xl overflow-hidden bg-slate-100 relative">
-                        <img src="images/reinigung-4.jpg" alt="Nordlys Reinigungsservice" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                    </div>
-                    <p class="text-xs font-semibold text-slate-700 px-1">Wohnzimmer bereit für die Anreise</p>
-                </div>
-
-                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100 space-y-2 group">
-                    <div class="aspect-[4/3] rounded-xl overflow-hidden bg-slate-100 relative">
-                        <img src="images/reinigung-5.jpg" alt="Nordlys Reinigungsservice" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                    </div>
-                    <p class="text-xs font-semibold text-slate-700 px-1">Küchenzeile – hygienisch rein gepflegt</p>
-                </div>
-
-                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100 space-y-2 group">
-                    <div class="aspect-[4/3] rounded-xl overflow-hidden bg-slate-100 relative">
-                        <img src="images/reinigung-6.jpg" alt="Nordlys Reinigungsservice" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                    </div>
-                    <p class="text-xs font-semibold text-slate-700 px-1">Hyggelige Wohlfühlatmosphäre überall</p>
+                    <p class="text-xs font-semibold text-slate-700 px-1 pt-1">Wohnkomfort & faltenfreie Betten</p>
                 </div>
 
             </div>
         </section>
 
+        <!-- SEKTION 2: DAS EINE FELD MIT UMGEBUNGSBILDERN -->
         <section class="space-y-6">
             <div class="flex items-center gap-3 border-b border-[#d1d2c7]/30 pb-3">
                 <span class="text-2xl">⚓</span>
@@ -129,21 +143,21 @@
                 
                 <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100 space-y-2 group">
                     <div class="aspect-[4/3] rounded-xl overflow-hidden bg-slate-100 relative">
-                        <img src="images/umgebung-1.jpg" alt="Schlei Region" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <img src="images/umgebung-1.jpg" alt="Morgentau in Kappeln an der Schlei" class="w-full h-full object-cover cursor-pointer transition duration-500 group-hover:scale-105" onclick="openLightbox(this)">
                     </div>
                     <p class="text-xs text-slate-400 font-medium px-1 uppercase tracking-wider">Kappeln & die Schlei</p>
                 </div>
 
                 <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100 space-y-2 group">
                     <div class="aspect-[4/3] rounded-xl overflow-hidden bg-slate-100 relative">
-                        <img src="images/umgebung-2.jpg" alt="OstseeResort Olpenitz" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <img src="images/umgebung-2.jpg" alt="OstseeResort Olpenitz" class="w-full h-full object-cover cursor-pointer transition duration-500 group-hover:scale-105" onclick="openLightbox(this)">
                     </div>
                     <p class="text-xs text-slate-400 font-medium px-1 uppercase tracking-wider">OstseeResort Olpenitz</p>
                 </div>
 
                 <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100 space-y-2 group">
                     <div class="aspect-[4/3] rounded-xl overflow-hidden bg-slate-100 relative">
-                        <img src="images/umgebung-3.jpg" alt="Schleswig Umgebung" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <img src="images/umgebung-3.jpg" alt="Maritime Landschaft an der Ostsee" class="w-full h-full object-cover cursor-pointer transition duration-500 group-hover:scale-105" onclick="openLightbox(this)">
                     </div>
                     <p class="text-xs text-slate-400 font-medium px-1 uppercase tracking-wider">Küste & Maritimes Flair</p>
                 </div>
@@ -151,6 +165,7 @@
             </div>
         </section>
 
+        <!-- ZURÜCK BUTTON -->
         <div class="pt-4 text-center">
             <a href="index.html" class="inline-flex items-center gap-2 px-6 py-3 bg-white border-2 border-[#767a3f] text-[#767a3f] font-bold rounded-xl hover:bg-[#767a3f] hover:text-white transition text-sm shadow-sm">
                 ← Zurück zur Startseite
@@ -159,6 +174,14 @@
 
     </main>
 
+    <!-- DAS VERGRÖSSERUNGS-FENSTER (LIGHTBOX POP-UP) -->
+    <div id="lightbox" class="hidden fixed inset-0 bg-black/95 z-[100] flex flex-col items-center justify-center p-4" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white text-4xl font-light hover:text-gray-300 transition">&times;</button>
+        <img id="lightbox-img" src="" alt="Vergrößerte Ansicht" class="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl">
+        <p id="lightbox-caption" class="text-white/80 text-sm mt-4 text-center font-medium max-w-xl"></p>
+    </div>
+
+    <!-- FOOTER -->
     <footer class="bg-white border-t border-slate-100 py-8 text-center text-xs text-slate-400 space-y-3">
         <p>© 2026 Nordlys – Nordische Objektbetreuung & Reinigung</p>
         <div class="space-x-3">
@@ -168,10 +191,45 @@
         </div>
     </footer>
 
+    <!-- INTERAKTIVES JAVASCRIPT -->
     <script>
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
+        }
+
+        function changeSlide(button, direction) {
+            const container = button.parentElement;
+            const images = container.querySelectorAll('.slider-image');
+            
+            let currentIndex = -1;
+            images.forEach((img, index) => {
+                if (img.classList.contains('active')) {
+                    currentIndex = index;
+                }
+            });
+
+            images[currentIndex].classList.remove('active');
+
+            let newIndex = currentIndex + direction;
+            if (newIndex >= images.length) newIndex = 0;
+            if (newIndex < 0) newIndex = images.length - 1;
+
+            images[newIndex].classList.add('active');
+        }
+
+        function openLightbox(imageElement) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+
+            lightboxImg.src = imageElement.src;
+            lightboxCaption.innerText = imageElement.alt;
+            lightbox.classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.add('hidden');
         }
     </script>
 </body>
