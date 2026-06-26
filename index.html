@@ -84,7 +84,7 @@
                     <div class="text-2xl">✨</div><h4 class="text-lg font-bold text-slate-900">Fensterreinigung mit Weitblick</h4>
                     <p class="text-sm text-slate-600 leading-relaxed">Für uns gehört der freie Blick einfach dazu. Die streifenfreie Reinigung der Fenster ist bei uns fester Bestandteil der Objektpflege – damit Ihre Gäste die wunderschöne Aussicht aufs Wasser voll genießen können.</p>
                 </div>
-                <div class="p-6 sm:p-8 bg-slate-50/50 rounded-2xl border border-[#767a3f]/30 space-y-3 transition hover:shadow-md border-l-4 border-l-[#767a3f] bg-[#fdfdfb]">
+                <div class="p-6 sm:p-8 bg-slate-50/50 rounded-2xl border-[#767a3f]/30 space-y-3 transition hover:shadow-md border-l-4 border-l-[#767a3f] bg-[#fdfdfb]">
                     <div class="text-2xl">🔑</div><h4 class="text-lg font-bold text-slate-900">Entlastung im Privathaushalt</h4>
                     <p class="text-sm text-slate-600 leading-relaxed">Diskrete Hilfe im Alltag. Wir unterstützen Sie in Ihrem Zuhause genau so, wie es am besten in Ihren Lebensrhythmus passt. Herzlich, vertrauensvoll und absolut gründlich.</p>
                     <div class="mt-3 p-3 bg-white rounded-xl border border-[#767a3f]/20 shadow-sm text-xs text-slate-700 leading-relaxed">
@@ -141,11 +141,12 @@
         <div class="space-x-3"><a href="impressum.html" class="hover:text-slate-600 transition underline">Impressum</a><span>•</span><a href="datenschutz.html" class="hover:text-slate-600 transition underline">Datenschutz</a></div>
     </footer>
 
-    <!-- SKRIPTE -->
+    <!-- LEAFLET SKRIPTE -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script>
         function toggleMobileMenu() { document.getElementById('mobile-menu').classList.toggle('hidden'); }
 
+        // Karte sauber laden
         const map = L.map('map', { scrollWheelZoom: false }).setView([54.590, 9.770], 11); 
         L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', { attribution: '© OpenStreetMap contributors © CARTO' }).addTo(map);
 
@@ -153,6 +154,24 @@
         L.circle([54.640, 9.915], zoneStyle).addTo(map);
         L.circle([54.5152, 9.5606], zoneStyle).addTo(map);
 
-        const redIcon = new L.Icon({
-            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
-            shadowUrl: 'https://cdnjs.cloudflare.com/ajaxNormally I can help with things like this, but I don't seem to have access to that content. You can try again or ask me for something else.
+        // Icon-Builder Funktion, um fehlerhafte URL-Verkürzungen im System komplett auszuschließen
+        function createRedMarker(coords, titleText) {
+            const markerIcon = new L.Icon({
+                iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+                shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            });
+            L.marker(coords, { icon: markerIcon }).addTo(map).bindPopup(titleText);
+        }
+
+        // Alle Stecknadeln punktgenau setzen
+        createRedMarker([54.6614, 9.9329], "<b>Kappeln</b><br>Unser Haupt-Stützpunkt");
+        createRedMarker([54.623366964369254, 9.97408395204925], "<b>Dörphof / Schönhagen / Karby / Winnemark</b><br>Ferienobjekte & Privathaushalte");
+        createRedMarker([54.66008509015403, 10.013000985712987], "<b>Olpenitz (OstseeResort)</b><br>Hausboot-Betreuung & Gästewechsel");
+        createRedMarker([54.5152, 9.5606], "<b>Schleswig</b><br>Ganzheitliche Objektpflege & Betreuung");
+    </script>
+</body>
+</html>
