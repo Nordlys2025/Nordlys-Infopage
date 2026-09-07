@@ -4,16 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nordlys – Datenschutzerklärung | Zuverlässige Objektbetreuung & Reinigung</title>
+    
+    <!-- Google Font: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .bg-structure {
-            background-color: #f8f9f5;
-            background-image: radial-gradient(#d1d2c7 0.8px, transparent 0.8px);
-            background-size: 16px 16px;
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
         }
-    </style>
+    </script>
 </head>
-<body class="bg-structure font-sans text-slate-800 antialiased">
+<body class="bg-[#fafaf7] font-sans text-slate-800 antialiased">
 
     <!-- NAVIGATION -->
     <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
@@ -29,16 +39,30 @@
             <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
                 <a href="index.html#philosophie" class="hover:text-[#767a3f] transition">Wer wir sind</a>
                 <a href="index.html#leistungen" class="hover:text-[#767a3f] transition">Leistungen</a>
+                <a href="index.html#preise" class="hover:text-[#767a3f] transition">Preise</a>
                 <a href="index.html#einsatzgebiet" class="hover:text-[#767a3f] transition">Einsatzgebiet</a>
                 <a href="galerie.html" class="hover:text-[#767a3f] transition">📸 Einblicke</a>
                 <a href="index.html#kontakt" class="px-5 py-2.5 bg-[#767a3f] hover:bg-[#5f6332] text-white rounded-xl transition shadow-sm">Lernen wir uns kennen</a>
             </div>
+
+            <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-slate-600 hover:text-[#767a3f] focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-4 space-y-2.5 shadow-md">
+            <a href="index.html#philosophie" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">Wer wir sind</a>
+            <a href="index.html#leistungen" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">Leistungen</a>
+            <a href="index.html#preise" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">Preise</a>
+            <a href="index.html#einsatzgebiet" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">Einsatzgebiet</a>
+            <a href="galerie.html" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">📸 Einblicke</a>
+            <a href="index.html#kontakt" onclick="toggleMobileMenu()" class="block text-center px-3 py-3 bg-[#767a3f] text-white font-bold rounded-xl shadow-sm">Jetzt anfragen</a>
         </div>
     </nav>
 
     <!-- MAIN BLOCK -->
     <main class="max-w-3xl mx-auto px-4 py-16">
-        <div class="bg-white p-8 sm:p-12 rounded-3xl shadow-xl border border-slate-100 space-y-6">
+        <div class="bg-white p-8 sm:p-12 rounded-3xl shadow-sm border border-slate-200/60 space-y-6">
             
             <h1 class="text-3xl font-bold text-slate-900 tracking-tight border-b border-slate-100 pb-4">Datenschutzerklärung</h1>
             
@@ -55,44 +79,67 @@
                 <p class="text-sm text-slate-600 leading-relaxed">
                     Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:<br><br>
                     Nordlys GbR<br>
-                    [Deine Straße / Hausnummer]<br>
-                    [Deine PLZ / Ort]<br>
-                    E-Mail: nordlys.sauberkeit.mit.herz@gmail.com
+                    Heidesiedlung 46<br>
+                    24376 Kappeln<br><br>
+                    Telefon: +49 176 34231097<br>
+                    E-Mail: <a href="mailto:nordlys.sauberkeit.mit.herz@gmail.com" class="text-[#767a3f] hover:underline">nordlys.sauberkeit.mit.herz@gmail.com</a>
                 </p>
             </section>
 
             <section class="space-y-3">
                 <h2 class="text-lg font-bold text-slate-900">3. Datenerfassung auf unserer Website</h2>
-                <h3 class="text-sm font-bold text-slate-800">Server-Log-Dateien</h3>
+                <h3 class="text-sm font-bold text-slate-800">Hosting über GitHub Pages</h3>
                 <p class="text-sm text-slate-600 leading-relaxed">
-                    Der Provider der Seiten erhebt und speichert automatisch Informationen in sogenannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Dies sind z.B. Browsertyp, verwendetes Betriebssystem, Referrer URL, Hostname des zugreifenden Rechners sowie Uhrzeit der Serveranfrage. Diese Daten sind nicht bestimmten Personen zuordenbar.
+                    Wir hosten unsere Website bei GitHub Pages (GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA). Beim Besuch der Website erfasst GitHub die Server-Log-Dateien (u. a. IP-Adresse, Datum/Uhrzeit, abgerufene Datei, Browsertyp). Dies erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO zur Bereitstellung eines stabilen und sicheren Webangebots.
                 </p>
                 <h3 class="text-sm font-bold text-slate-800">Kontakt per E-Mail oder Telefon</h3>
                 <p class="text-sm text-slate-600 leading-relaxed">
-                    Wenn Sie uns per E-Mail oder Telefon kontaktieren, werden Ihre Angaben zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+                    Wenn Sie uns per E-Mail oder Telefon kontaktieren, werden Ihre Angaben zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Die Verarbeitung erfolgt gemäß Art. 6 Abs. 1 lit. b DSGVO zur Durchführung vorvertraglicher Maßnahmen bzw. nach Art. 6 Abs. 1 lit. f DSGVO für unser berechtigtes Interesse an einer schnellen Beantwortung Ihrer Anfrage.
                 </p>
             </section>
 
             <section class="space-y-3 pt-4 border-t border-slate-100">
-                <h2 class="text-lg font-bold text-slate-900">4. Drittdienste &amp; Karten (Leaflet / OpenStreetMap)</h2>
+                <h2 class="text-lg font-bold text-slate-900">4. Web Fonts (Google Fonts)</h2>
                 <p class="text-sm text-slate-600 leading-relaxed">
-                    Zur Darstellung unseres Einsatzgebietes nutzen wir eine interaktive Karte über die Open-Source-Bibliothek Leaflet sowie Kartendaten von OpenStreetMap und CartoDB. Beim Laden der Karte wird eine Verbindung zu den Servern dieser Drittanbieter hergestellt, um die Kacheln darzustellen. Hierbei wird technisch bedingt Ihre IP-Adresse übertragen. Die Nutzung erfolgt im Interesse einer ansprechenden Darstellung unserer Online-Angebote und einer leichten Auffindbarkeit unserer Servicezonen.
+                    Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten Web Fonts von Google. Beim Aufruf einer Seite lädt Ihr Browser die benötigten Schriften in den Browsercache, um Texte korrekt anzuzeigen. Hierzu nimmt Ihr Browser Verbindung zu den Servern von Google auf, wodurch Google Kenntnis über Ihre IP-Adresse erhält. Die Nutzung erfolgt auf Grundlage unseres berechtigten Interesses an einer ansprechenden und einheitlichen Darstellung unseres Online-Auftritts (Art. 6 Abs. 1 lit. f DSGVO).
+                </p>
+            </section>
+
+            <section class="space-y-3 pt-4 border-t border-slate-100">
+                <h2 class="text-lg font-bold text-slate-900">5. Drittdienste &amp; Karten (Leaflet / OpenStreetMap)</h2>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    Zur visuellen Darstellung unseres regionalen Einsatzgebietes nutzen wir eine interaktive Karte über die Open-Source-Bibliothek Leaflet mit Kartendaten von OpenStreetMap (OpenStreetMap Foundation, St John’s Innovation Centre, Cowley Road, Cambridge, CB4 0WS, UK). Beim Laden der Karte wird zur technischen Übertragung der Kartenkacheln Ihre IP-Adresse an OpenStreetMap übertragen. Die Nutzung erfolgt im Interesse einer nutzerfreundlichen Darstellung unseres Einzugsgebiets (Art. 6 Abs. 1 lit. f DSGVO).
+                </p>
+            </section>
+
+            <section class="space-y-3 pt-4 border-t border-slate-100">
+                <h2 class="text-lg font-bold text-slate-900">6. Ihre Rechte</h2>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten (Art. 15 DSGVO). Sie haben außerdem das Recht, die Berichtigung, Sperrung oder Löschung dieser Daten zu verlangen sowie sich bei einer zuständigen Aufsichtsbehörde zu beschweren.
                 </p>
             </section>
 
             <div class="pt-6 text-center">
-                <a href="index.html" class="text-xs text-[#767a3f] font-bold hover:underline">← Zurück zur Startseite</a>
+                <a href="index.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-[#fafaf7] hover:bg-[#f2f3ea] text-[#767a3f] font-bold text-xs rounded-xl border border-slate-200/60 transition shadow-sm">
+                    ← Zurück zur Startseite
+                </a>
             </div>
         </div>
     </main>
 
     <!-- FOOTER -->
-    <footer class="bg-white border-t border-slate-100 py-8 text-center text-xs text-slate-400 space-y-3">
+    <footer class="bg-white border-t border-slate-200/60 py-8 text-center text-xs text-slate-400 space-y-3">
         <p>© 2026 Nordlys – Nordische Objektbetreuung & Reinigung</p>
         <div class="space-x-3">
             <a href="impressum.html" class="hover:text-slate-600 transition underline decoration-dotted">Impressum</a>
         </div>
     </footer>
 
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
 </body>
 </html>
