@@ -4,16 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nordlys – Impressum | Zuverlässige Objektbetreuung & Reinigung</title>
+    
+    <!-- Google Font: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .bg-structure {
-            background-color: #f8f9f5;
-            background-image: radial-gradient(#d1d2c7 0.8px, transparent 0.8px);
-            background-size: 16px 16px;
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
         }
-    </style>
+    </script>
 </head>
-<body class="bg-structure font-sans text-slate-800 antialiased">
+<body class="bg-[#fafaf7] font-sans text-slate-800 antialiased">
 
     <!-- NAVIGATION -->
     <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
@@ -29,21 +39,35 @@
             <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
                 <a href="index.html#philosophie" class="hover:text-[#767a3f] transition">Wer wir sind</a>
                 <a href="index.html#leistungen" class="hover:text-[#767a3f] transition">Leistungen</a>
+                <a href="index.html#preise" class="hover:text-[#767a3f] transition">Preise</a>
                 <a href="index.html#einsatzgebiet" class="hover:text-[#767a3f] transition">Einsatzgebiet</a>
                 <a href="galerie.html" class="hover:text-[#767a3f] transition">📸 Einblicke</a>
                 <a href="index.html#kontakt" class="px-5 py-2.5 bg-[#767a3f] hover:bg-[#5f6332] text-white rounded-xl transition shadow-sm">Lernen wir uns kennen</a>
             </div>
+
+            <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-slate-600 hover:text-[#767a3f] focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-4 space-y-2.5 shadow-md">
+            <a href="index.html#philosophie" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">Wer wir sind</a>
+            <a href="index.html#leistungen" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">Leistungen</a>
+            <a href="index.html#preise" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">Preise</a>
+            <a href="index.html#einsatzgebiet" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">Einsatzgebiet</a>
+            <a href="galerie.html" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">📸 Einblicke</a>
+            <a href="index.html#kontakt" onclick="toggleMobileMenu()" class="block text-center px-3 py-3 bg-[#767a3f] text-white font-bold rounded-xl shadow-sm">Jetzt anfragen</a>
         </div>
     </nav>
 
-    <!-- MAIN BLOCK -->
+    <!-- MAIN CONTENT -->
     <main class="max-w-3xl mx-auto px-4 py-16">
-        <div class="bg-white p-8 sm:p-12 rounded-3xl shadow-xl border border-slate-100 space-y-6">
+        <div class="bg-white p-8 sm:p-12 rounded-3xl shadow-sm border border-slate-200/60 space-y-6">
             
             <h1 class="text-3xl font-bold text-slate-900 tracking-tight border-b border-slate-100 pb-4">Impressum</h1>
             
-            <section class="space-y-3">
-                <h2 class="text-lg font-bold text-slate-900">Angaben gemäß § 5 TMG</h2>
+            <section class="space-y-2">
+                <h2 class="text-lg font-bold text-slate-900">Angaben gemäß § 5 DDG</h2>
                 <p class="text-sm text-slate-600 leading-relaxed">
                     Nordlys GbR<br>
                     Heidesiedlung 46<br>
@@ -51,50 +75,65 @@
                 </p>
             </section>
 
-            <section class="space-y-3">
+            <section class="space-y-2">
                 <h2 class="text-lg font-bold text-slate-900">Vertreten durch die geschäftsführenden Gesellschafter</h2>
                 <p class="text-sm text-slate-600 leading-relaxed">
                     Jannik Hein &amp; Stefanie Timm
                 </p>
             </section>
 
-            <section class="space-y-3">
+            <section class="space-y-2">
                 <h2 class="text-lg font-bold text-slate-900">Kontakt</h2>
                 <p class="text-sm text-slate-600 leading-relaxed">
                     Telefon: +49 176 34231097<br>
-                    E-Mail: nordlys.sauberkeit.mit.herz@gmail.com
+                    E-Mail: <a href="mailto:nordlys.sauberkeit.mit.herz@gmail.com" class="text-[#767a3f] hover:underline">nordlys.sauberkeit.mit.herz@gmail.com</a>
                 </p>
             </section>
 
-            <section class="space-y-3 pt-4 border-t border-slate-100">
+            <section class="space-y-2 pt-4 border-t border-slate-100">
                 <h2 class="text-lg font-bold text-slate-900">Umsatzsteuer-ID</h2>
                 <p class="text-sm text-slate-600 leading-relaxed">
                     Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br>
-                    [Deine Umsatzsteuer-ID / oder Angabe: "Folgt nach Zuteilung"]
+                    <span class="text-slate-500 italic">[Wird nach Zuteilung ergänzt / Kleinunternehmerregelung gem. § 19 UStG]</span>
                 </p>
             </section>
 
-            <section class="space-y-3 pt-4 border-t border-slate-100">
-                <h2 class="text-lg font-bold text-slate-900">Streitschlichtung</h2>
+            <section class="space-y-2 pt-4 border-t border-slate-100">
+                <h2 class="text-lg font-bold text-slate-900">EU-Streitschlichtung</h2>
                 <p class="text-xs text-slate-500 leading-relaxed">
-                    Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank" class="text-[#767a3f] underline">https://ec.europa.eu/consumers/odr</a>.<br>
-                    Unsere E-Mail-Adresse finden Sie oben im Impressum. Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+                    Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" class="text-[#767a3f] underline">https://ec.europa.eu/consumers/odr</a>.<br>
+                    Unsere E-Mail-Adresse finden Sie oben im Impressum.
+                </p>
+            </section>
+
+            <section class="space-y-2">
+                <h2 class="text-sm font-bold text-slate-900">Verbraucherstreitbeilegung / Universalschlichtungsstelle</h2>
+                <p class="text-xs text-slate-500 leading-relaxed">
+                    Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
                 </p>
             </section>
 
             <div class="pt-6 text-center">
-                <a href="index.html" class="text-xs text-[#767a3f] font-bold hover:underline">← Zurück zur Startseite</a>
+                <a href="index.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-[#fafaf7] hover:bg-[#f2f3ea] text-[#767a3f] font-bold text-xs rounded-xl border border-slate-200/60 transition shadow-sm">
+                    ← Zurück zur Startseite
+                </a>
             </div>
         </div>
     </main>
 
     <!-- FOOTER -->
-    <footer class="bg-white border-t border-slate-100 py-8 text-center text-xs text-slate-400 space-y-3">
+    <footer class="bg-white border-t border-slate-200/60 py-8 text-center text-xs text-slate-400 space-y-3">
         <p>© 2026 Nordlys – Nordische Objektbetreuung & Reinigung</p>
         <div class="space-x-3">
             <a href="datenschutz.html" class="hover:text-slate-600 transition underline decoration-dotted">Datenschutzerklärung</a>
         </div>
     </footer>
 
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
 </body>
 </html>
