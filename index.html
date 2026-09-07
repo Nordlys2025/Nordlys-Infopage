@@ -14,74 +14,99 @@
 </head>
 <body class="bg-structure font-sans text-slate-800 antialiased">
 
-    <!-- NAVIGATION -->
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <!-- SCHWEBENDE NAVIGATION (FLOATING PILL) -->
+    <header class="sticky top-4 z-50 max-w-5xl mx-auto px-4 sm:px-6">
+        <nav class="bg-white/80 backdrop-blur-lg border border-slate-200/70 rounded-2xl shadow-sm px-4 sm:px-6 h-18 py-3 flex items-center justify-between transition-all">
+            
+            <!-- Logo & Branding -->
             <a href="#" class="flex items-center gap-3 group">
-                <img src="images/Nordlys_Logo_Transparent.png" alt="Nordlys Logo" class="w-12 h-12 object-contain transition-transform group-hover:scale-105">
+                <div class="relative">
+                    <img src="images/Nordlys_Logo_Transparent.png" alt="Nordlys Logo" class="w-11 h-11 object-contain transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-[#767a3f]/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+                </div>
                 <div class="flex flex-col">
-                    <span class="text-xl font-bold tracking-widest text-[#767a3f] uppercase">Nordlys</span>
-                    <span class="text-[10px] text-slate-400 uppercase tracking-wider -mt-1">Sauberkeit mit Herz</span>
+                    <span class="text-lg font-bold tracking-widest text-[#767a3f] uppercase leading-none">Nordlys</span>
+                    <span class="text-[10px] text-slate-400 uppercase tracking-wider mt-1">Sauberkeit mit Herz</span>
                 </div>
             </a>
-            <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
-                <a href="#philosophie" class="hover:text-[#767a3f] transition">Wer wir sind</a>
-                <a href="#leistungen" class="hover:text-[#767a3f] transition">Leistungen</a>
-                <a href="#preise" class="hover:text-[#767a3f] transition">Preise</a>
-                <a href="#einsatzgebiet" class="hover:text-[#767a3f] transition">Einsatzgebiet</a>
-                <a href="galerie.html" class="hover:text-[#767a3f] transition flex items-center gap-1">📸 Einblicke</a>
-                <a href="#kontakt" class="px-5 py-2.5 bg-[#767a3f] hover:bg-[#5f6332] text-white rounded-xl transition shadow-sm">Lernen wir uns kennen</a>
+
+            <!-- Desktop Navigation mit weichen Pill-Hover-Effekten -->
+            <div class="hidden md:flex items-center gap-1 text-sm font-medium text-slate-600">
+                <a href="#philosophie" class="px-3 py-2 rounded-xl hover:text-[#767a3f] hover:bg-[#767a3f]/10 transition">Wer wir sind</a>
+                <a href="#leistungen" class="px-3 py-2 rounded-xl hover:text-[#767a3f] hover:bg-[#767a3f]/10 transition">Leistungen</a>
+                <a href="#preise" class="px-3 py-2 rounded-xl hover:text-[#767a3f] hover:bg-[#767a3f]/10 transition">Preise</a>
+                <a href="#einsatzgebiet" class="px-3 py-2 rounded-xl hover:text-[#767a3f] hover:bg-[#767a3f]/10 transition">Einsatzgebiet</a>
+                <a href="galerie.html" class="px-3 py-2 rounded-xl hover:text-[#767a3f] hover:bg-[#767a3f]/10 transition flex items-center gap-1.5">
+                    <span>📸</span> Einblicke
+                </a>
             </div>
-            <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-slate-600 hover:text-[#767a3f] focus:outline-none">
+
+            <!-- Rechts: Schneller Anruf & Button -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="tel:+4917634231097" class="p-2.5 text-slate-500 hover:text-[#767a3f] hover:bg-[#767a3f]/10 rounded-xl transition" title="Direkt anrufen">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                </a>
+                <a href="#kontakt" class="px-4 py-2 bg-[#767a3f] hover:bg-[#5f6332] text-white text-xs sm:text-sm font-semibold rounded-xl transition shadow-sm active:scale-95">
+                    Kontakt
+                </a>
+            </div>
+
+            <!-- Burger Button Mobil -->
+            <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-slate-600 hover:text-[#767a3f] focus:outline-none rounded-xl">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
             </button>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-4 space-y-2.5 shadow-md">
+        </nav>
+
+        <!-- Mobiles Aufklapp-Menü (schwebend) -->
+        <div id="mobile-menu" class="hidden md:hidden mt-2 bg-white/95 backdrop-blur-lg border border-slate-200/70 rounded-2xl p-4 space-y-2 shadow-lg">
             <a href="#philosophie" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">Wer wir sind</a>
             <a href="#leistungen" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">Leistungen</a>
             <a href="#preise" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">Preise</a>
             <a href="#einsatzgebiet" onclick="toggleMobileMenu()" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">Einsatzgebiet</a>
             <a href="galerie.html" class="block px-3 py-2 text-slate-600 font-medium hover:bg-slate-50 rounded-xl">📸 Einblicke</a>
-            <a href="#kontakt" onclick="toggleMobileMenu()" class="block text-center px-3 py-3 bg-[#767a3f] text-white font-bold rounded-xl shadow-sm">Jetzt anfragen</a>
+            <div class="pt-2 border-t border-slate-100 flex gap-2">
+                <a href="tel:+4917634231097" class="flex-1 text-center py-2.5 border border-[#767a3f] text-[#767a3f] font-bold text-sm rounded-xl">📞 Anrufen</a>
+                <a href="#kontakt" onclick="toggleMobileMenu()" class="flex-1 text-center py-2.5 bg-[#767a3f] text-white font-bold text-sm rounded-xl">Kontakt</a>
+            </div>
         </div>
-    </nav>
+    </header>
 
     <!-- HERO SEKTION: Skandinavischer Naturton-Verlauf -->
-<header class="relative overflow-hidden py-24 lg:py-32 border-b border-slate-100 bg-gradient-to-b from-[#eef0e5] via-[#f9faf7] to-[#f8f9f5]">
-    <!-- Dezente Lichtkegel im Hintergrund für mehr Raumtiefe -->
-    <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-[#dbe0c8]/40 rounded-full blur-3xl pointer-events-none"></div>
+    <section class="relative overflow-hidden pt-16 pb-24 lg:pt-20 lg:pb-32 border-b border-slate-100 bg-gradient-to-b from-[#eef0e5] via-[#f9faf7] to-[#f8f9f5]">
+        <!-- Dezente Lichtkegel im Hintergrund für mehr Raumtiefe -->
+        <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-[#dbe0c8]/40 rounded-full blur-3xl pointer-events-none"></div>
 
-    <div class="max-w-4xl mx-auto px-4 text-center relative z-10 space-y-6">
-        <!-- Plakette mit Dannebrog und SH-Flagge -->
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/90 border border-slate-200/60 shadow-sm text-[#767a3f] text-xs font-bold uppercase tracking-wider mx-auto">
-            <svg class="w-4 h-3 rounded-sm shadow-sm inline-block -mt-0.5" viewBox="0 0 37 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="37" height="28" fill="#E31D1C"/>
-                <rect x="12" width="4" height="28" fill="#FFFFFF"/>
-                <rect y="12" width="37" height="4" fill="#FFFFFF"/>
-            </svg>
-            <span>Aktiv an der Schlei: Kappeln & Schleswig</span>
-            <svg class="w-4 h-3 rounded-sm shadow-sm inline-block -mt-0.5" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="32" height="8" fill="#0066CC"/>
-                <rect y="8" width="32" height="8" fill="#FFFFFF"/>
-                <rect y="16" width="32" height="8" fill="#E31D1C"/>
-            </svg>
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10 space-y-6">
+            <!-- Plakette mit Dannebrog und SH-Flagge -->
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/90 border border-slate-200/60 shadow-sm text-[#767a3f] text-xs font-bold uppercase tracking-wider mx-auto">
+                <svg class="w-4 h-3 rounded-sm shadow-sm inline-block -mt-0.5" viewBox="0 0 37 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="37" height="28" fill="#E31D1C"/>
+                    <rect x="12" width="4" height="28" fill="#FFFFFF"/>
+                    <rect y="12" width="37" height="4" fill="#FFFFFF"/>
+                </svg>
+                <span>Aktiv an der Schlei: Kappeln & Schleswig</span>
+                <svg class="w-4 h-3 rounded-sm shadow-sm inline-block -mt-0.5" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="8" fill="#0066CC"/>
+                    <rect y="8" width="32" height="8" fill="#FFFFFF"/>
+                    <rect y="16" width="32" height="8" fill="#E31D1C"/>
+                </svg>
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-slate-900 leading-tight">
+                Verlässliche Objektpflege <br class="hidden sm:inline">
+                <span class="font-medium text-[#767a3f]">mit dänischer Mentalität und stets einem Lächeln.</span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-slate-600 max-w-xl mx-auto leading-relaxed">
+                Wir sind kein anonymes Großunternehmen. Als familiäres Team bringen wir die skandinavische Gelassenheit, Ehrlichkeit und den Blick fürs Detail direkt in Ihr Objekt.
+            </p>
+
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-sm mx-auto">
+                <a href="#kontakt" class="w-full sm:w-auto px-8 py-4 bg-[#767a3f] hover:bg-[#5f6332] text-white font-bold rounded-2xl transition shadow-lg text-center active:scale-95">✉ Hallo sagen & anfragen</a>
+                <a href="galerie.html" class="w-full sm:w-auto px-8 py-4 border-2 border-[#767a3f] bg-white/70 hover:bg-[#767a3f] text-[#767a3f] hover:text-white font-bold rounded-2xl transition text-center shadow-sm">Unsere Arbeit sehen</a>
+            </div>
         </div>
-
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-slate-900 leading-tight">
-            Verlässliche Objektpflege <br class="hidden sm:inline">
-            <span class="font-medium text-[#767a3f]">mit dänischer Mentalität und stets einem Lächeln.</span>
-        </h1>
-
-        <p class="text-base sm:text-lg text-slate-600 max-w-xl mx-auto leading-relaxed">
-            Wir sind kein anonymes Großunternehmen. Als familiäres Team bringen wir die skandinavische Gelassenheit, Ehrlichkeit und den Blick fürs Detail direkt in Ihr Objekt.
-        </p>
-
-        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-sm mx-auto">
-            <a href="#kontakt" class="w-full sm:w-auto px-8 py-4 bg-[#767a3f] hover:bg-[#5f6332] text-white font-bold rounded-2xl transition shadow-lg text-center active:scale-95">✉ Hallo sagen & anfragen</a>
-            <a href="galerie.html" class="w-full sm:w-auto px-8 py-4 border-2 border-[#767a3f] bg-white/70 hover:bg-[#767a3f] text-[#767a3f] hover:text-white font-bold rounded-2xl transition text-center shadow-sm">Unsere Arbeit sehen</a>
-        </div>
-    </div>
-</header>
+    </section>
 
     <!-- PHILOSOPHIE -->
     <section id="philosophie" class="py-20 max-w-4xl mx-auto px-4 text-center scroll-mt-20">
