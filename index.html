@@ -213,7 +213,118 @@
             </div>
         </div>
     </section>
+    
+<!-- FAQ SEKTION (Akkordeon) -->
+    <section id="faq" class="py-20 bg-white border-t border-slate-200/60 scroll-mt-20">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6">
+            <div class="text-center space-y-2 mb-12">
+                <h2 class="text-xs font-bold text-[#767a3f] uppercase tracking-wider">Häufige Fragen</h2>
+                <h3 class="text-3xl font-light text-slate-900">Alles, was Sie <span class="font-medium text-[#767a3f]">wissen müssen</span></h3>
+                <p class="text-sm text-slate-500 leading-relaxed max-w-md mx-auto">
+                    Transparenz von Anfang an. Hier finden Sie schnelle Antworten auf die wichtigsten Fragen rund um unsere Abläufe.
+                </p>
+            </div>
 
+            <!-- Akkordeon Liste -->
+            <div class="space-y-4">
+
+                <!-- Frage 1 -->
+                <div class="border border-slate-200/70 rounded-2xl bg-[#fafaf7] overflow-hidden transition">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex justify-between items-center gap-4 focus:outline-none select-none">
+                        <span class="font-semibold text-slate-900 text-sm sm:text-base">Bringen Sie eigenes Reinigungsequipment und Reinigungsmittel mit?</span>
+                        <span class="faq-icon text-[#767a3f] text-xl font-light transition-transform duration-300">+</span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+                        <p class="text-sm text-slate-600 leading-relaxed pb-5 border-t border-slate-200/50 pt-3">
+                            Ja, absolut. Wir haben sämtliche professionelle Reinigungsutensilien, streifenfreie Glasreiniger, Staubsauger und Mikrofasertücher immer an Bord. Sollten Sie für Ihr Objekt spezielle Wünsche oder empfindliche Echtholzböden haben, stimmen wir die Pflegemittel natürlich vorab mit Ihnen ab.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Frage 2 -->
+                <div class="border border-slate-200/70 rounded-2xl bg-[#fafaf7] overflow-hidden transition">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex justify-between items-center gap-4 focus:outline-none select-none">
+                        <span class="font-semibold text-slate-900 text-sm sm:text-base">Wie funktioniert die Schlüsselübergabe bei Ferienunterkünften?</span>
+                        <span class="faq-icon text-[#767a3f] text-xl font-light transition-transform duration-300">+</span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+                        <p class="text-sm text-slate-600 leading-relaxed pb-5 border-t border-slate-200/50 pt-3">
+                            Vollkommen unkompliziert. In der Regel nutzen wir Schlüsseltresore direkt am Objekt oder hinterlegte Schließcodes. Bei fest betreuten Objekten oder Agentur-Kooperationen verwahren wir die Schlüssel auf Wunsch sicher und diskret in unserem Bestand.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Frage 3 -->
+                <div class="border border-slate-200/70 rounded-2xl bg-[#fafaf7] overflow-hidden transition">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex justify-between items-center gap-4 focus:outline-none select-none">
+                        <span class="font-semibold text-slate-900 text-sm sm:text-base">Wie läuft die Abrechnung über den Entlastungsbetrag (§ 45b SGB XI)?</span>
+                        <span class="faq-icon text-[#767a3f] text-xl font-light transition-transform duration-300">+</span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+                        <p class="text-sm text-slate-600 leading-relaxed pb-5 border-t border-slate-200/50 pt-3">
+                            Ab Pflegegrad 1 steht jedem Versicherten ein monatlicher Entlastungsbetrag von bis zu 125 € über die Pflegekasse zu. Als anerkannter Dienstleister können wir unsere hauswirtschaftlichen Leistungen direkt mit Ihrer Pflegekasse abrechnen – Sie müssen in vielen Fällen nicht einmal in Vorleistung gehen. Wir beraten Sie dazu gern im Erstgespräch.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Frage 4 -->
+                <div class="border border-slate-200/70 rounded-2xl bg-[#fafaf7] overflow-hidden transition">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex justify-between items-center gap-4 focus:outline-none select-none">
+                        <span class="font-semibold text-slate-900 text-sm sm:text-base">Was passiert, wenn ein Gast einen Mangel oder Schaden hinterlassen hat?</span>
+                        <span class="faq-icon text-[#767a3f] text-xl font-light transition-transform duration-300">+</span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+                        <p class="text-sm text-slate-600 leading-relaxed pb-5 border-t border-slate-200/50 pt-3">
+                            Wir schauen bei jedem Wechsel genau hin. Sollte Inventar beschädigt oder die Wohnung in einem unzumutbaren Zustand hinterlassen worden sein, dokumentieren wir das direkt mit aussagekräftigen Fotos und informieren Sie umgehend vor dem Eintreffen der nächsten Gäste.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Frage 5 -->
+                <div class="border border-slate-200/70 rounded-2xl bg-[#fafaf7] overflow-hidden transition">
+                    <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex justify-between items-center gap-4 focus:outline-none select-none">
+                        <span class="font-semibold text-slate-900 text-sm sm:text-base">Sind kurzfristige Einsätze oder Vertretungen möglich?</span>
+                        <span class="faq-icon text-[#767a3f] text-xl font-light transition-transform duration-300">+</span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+                        <p class="text-sm text-slate-600 leading-relaxed pb-5 border-t border-slate-200/50 pt-3">
+                            Durch unseren klaren Fokus auf die Region Schlei (Kappeln, Olpenitz, Maasholm, Schleswig) sind unsere Wege kurz. Wenn Not am Mann ist, finden wir oft auch kurzfristig eine pragmatische Lösung. Rufen Sie uns in dringenden Fällen am besten direkt kurz an.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-10 text-center">
+                <p class="text-xs text-slate-500">
+                    Ihre Frage war nicht dabei? <a href="#kontakt" class="text-[#767a3f] font-semibold hover:underline">Schreiben Sie uns einfach kurz</a> oder rufen Sie durch.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- JS FÜR AKKORDEON -->
+    <script>
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.faq-icon');
+            const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+            // Alle anderen offenen Fragen schließen (optional, sorgt für saubere Übersicht)
+            document.querySelectorAll('.faq-content').forEach(el => el.style.maxHeight = null);
+            document.querySelectorAll('.faq-icon').forEach(el => {
+                el.innerText = '+';
+                el.classList.remove('rotate-45');
+            });
+
+            if (!isOpen) {
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.innerText = '×';
+                icon.classList.add('rotate-45');
+            }
+        }
+    </script>
+    
     <!-- KONTAKT MIT FORMULAR (GitHub-Übergangsmodus mit Direkt-Mail) -->
     <section id="kontakt" class="py-20 scroll-mt-20">
         <div class="max-w-2xl mx-auto px-4 sm:px-6">
